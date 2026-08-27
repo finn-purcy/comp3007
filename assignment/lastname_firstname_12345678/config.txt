@@ -1,8 +1,8 @@
 
 # Student Information
-Surname: Trump
-GivenNames: Donald
-StudentID: 12345678
+Surname: Finn
+GivenNames: Purcell
+StudentID: 21500358
 
 # Hyperparameters
 learning_rate: 0.001

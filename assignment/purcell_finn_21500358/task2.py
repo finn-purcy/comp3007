@@ -35,20 +35,21 @@ def show_image(image, title='test', cmap = 'gray'):
     plt.show()
     plt.savefig(f'test_out/{title}.png')
 
-def binarise_image(image, threshold=threshold_niblack, windowSize = 15, k=0.2):
+
+def binarise_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
     """converts to binary image"""
     image = img_as_float(image) #convert to use skilearn thresholding
-    th = threshold(image, windowSize, k)
+    th = threshold(image)#, windowSize, k)
     binary_im = image > th
+
+    cv_compat_binary_im = img_as_ubyte(binary_im)
+    show_image(cv_compat_binary_im, title = "binary_image", cmap='binary')
 
     return img_as_ubyte(binary_im) #convert back to openCV
 
 def connectedComponentAnalysis(image):
     # Find connected components
-    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(
-        image,
-        connectivity=8
-    )
+    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(image, 4)
 
     # Make a copy to draw on
     marked_image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
@@ -95,5 +96,5 @@ if __name__ == "__main__":
     image = read_im_gs("images/lcd2.png")
     binary = binarise_image(image, threshold_sauvola)
     connectedComponentAnalysis(binary)
-    show_image(binary)
+
 #save_output("assignment/lastname_firstname_12345678/output/task2/task2output.txt", "bruh")

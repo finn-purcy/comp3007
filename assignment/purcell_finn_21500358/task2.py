@@ -6,6 +6,7 @@ import cv2
 from matplotlib import pyplot as plt
 from skimage.filters import threshold_niblack, threshold_sauvola, threshold_otsu
 from skimage.util import img_as_float, img_as_ubyte #for conversion
+import numpy as np
 
 def save_output(output_path, content, output_type='txt'):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -36,25 +37,33 @@ def show_image(image, title='test', cmap = 'gray'):
     plt.savefig(f'test_out/{title}.png')
 
 
-def binarise_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
-    """converts to binary image"""
+def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
+    """applies median blur and converts to binary image"""
+    image = cv2.resize(image, (1000, 1000))
+    image = cv2.normalize(image, None, 0, 255, cv2.NORM_MINMAX)
+    image = cv2.medianBlur(image, 5)
     image = img_as_float(image) #convert to use skilearn thresholding
-    th = threshold(image)#, windowSize, k)
+    if threshold == threshold_otsu:
+        th = threshold(image)
+    else:
+        th = threshold(image, windowSize, k) #statistical thresholds require additional params
     binary_im = image > th
 
-    cv_compat_binary_im = img_as_ubyte(binary_im)
-    show_image(cv_compat_binary_im, title = "binary_image", cmap='binary')
+    cv_im = img_as_ubyte(binary_im) #convert back to openCV
 
-    return img_as_ubyte(binary_im) #convert back to openCV
+    cv_im = cv2.medianBlur(cv_im, 7)
+    
+    show_image(cv_im, title = "binary_image", cmap='binary')
+
+    return cv_im 
 
 def connectedComponentAnalysis(image):
-    # Find connected components
-    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(image, 4)
+    num_labels, ids, stats, centroids = cv2.connectedComponentsWithStats(image, 8)
 
-    # Make a copy to draw on
+    # copy to draw on
     marked_image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
 
-    # Start at 1 because label 0 is the background
+    # start at 1 because label 0 is the background
     for i in range(1, num_labels):
         x = stats[i, cv2.CC_STAT_LEFT]
         y = stats[i, cv2.CC_STAT_TOP]
@@ -62,30 +71,34 @@ def connectedComponentAnalysis(image):
         h = stats[i, cv2.CC_STAT_HEIGHT]
         area = stats[i, cv2.CC_STAT_AREA]
 
-        # Draw bounding box
-        cv2.rectangle(
-            marked_image,
-            (x, y),
-            (x + w, y + h),
-            (0, 255, 0),
-            2
-        )
+        #filtering results:
+        if (area > 50):
+            digitMask = (ids == i).astype("uint8") * 255
 
-        # Draw component number
-        cv2.putText(
-            marked_image,
-            str(i),
-            (x, y - 5),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.5,
-            (0, 255, 0),
-            1
-        )
+            # draw bounding box
+            cv2.rectangle(
+                marked_image,
+                (x, y),
+                (x + w, y + h),
+                (0, 255, 0),
+                2
+            )
+
+            # Draw component number
+            cv2.putText(
+                marked_image,
+                str(i),
+                (x, y - 5),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5,
+                (0, 255, 0),
+                1
+            )
 
     # Display
     show_image(cv2.cvtColor(marked_image, cv2.COLOR_BGR2RGB), "blob_detection", cmap=None)
 
-    return num_labels, labels, stats, centroids
+    return cv2.cvtColor(marked_image, cv2.COLOR_BGR2RGB)
 
 def run_task2(image_path, config):
     # TODO: Implement task 2 here
@@ -93,8 +106,11 @@ def run_task2(image_path, config):
     save_output(output_path, "Task 2 output", output_type='txt')
 
 if __name__ == "__main__":
-    image = read_im_gs("images/lcd2.png")
-    binary = binarise_image(image, threshold_sauvola)
-    connectedComponentAnalysis(binary)
+    image = read_im_gs("images/lcd4.png")
+
+    binary = preprocess_image(image, threshold_sauvola, windowSize=15, k=0.025)
+    markedImage = connectedComponentAnalysis(binary)
+    
+    print(np.unique(binary))
 
 #save_output("assignment/lastname_firstname_12345678/output/task2/task2output.txt", "bruh")

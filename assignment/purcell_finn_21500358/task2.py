@@ -52,6 +52,7 @@ def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
     cv_im = img_as_ubyte(binary_im) #convert back to openCV
 
     cv_im = cv2.medianBlur(cv_im, 7)
+    cv_im = cv2.medianBlur(cv_im, 5)
     
     show_image(cv_im, title = "binary_image", cmap='binary')
 
@@ -72,7 +73,7 @@ def connectedComponentAnalysis(image):
         area = stats[i, cv2.CC_STAT_AREA]
 
         #filtering results:
-        if (area > 50):
+        if (area > 300) and (area < 500000):
             digitMask = (ids == i).astype("uint8") * 255
 
             # draw bounding box
@@ -109,7 +110,16 @@ if __name__ == "__main__":
     image = read_im_gs("images/lcd4.png")
 
     binary = preprocess_image(image, threshold_sauvola, windowSize=15, k=0.025)
-    markedImage = connectedComponentAnalysis(binary)
+
+
+    not_binary = cv2.bitwise_not(binary)
+
+    kernel = np.ones((7, 7), np.uint8)
+
+    combined = cv2.dilate(not_binary, kernel, iterations=2)
+
+    binary = cv2.bitwise_not(combined)
+    markedImage = connectedComponentAnalysis(combined)
     
     print(np.unique(binary))
 

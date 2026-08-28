@@ -51,7 +51,10 @@ def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
 
     cv_im = img_as_ubyte(binary_im) #convert back to openCV
 
-    cv_im = cv2.medianBlur(cv_im, 7)
+    #kernel = np.ones((5, 5), np.uint8)
+    #combined = cv2.dilate(cv_im, kernel, iterations=1)
+
+    #cv_im = cv2.medianBlur(cv_im, 7)
     
     show_image(cv_im, title = "binary_image", cmap='binary')
 
@@ -106,7 +109,7 @@ def run_task2(image_path, config):
     save_output(output_path, "Task 2 output", output_type='txt')
 
 if __name__ == "__main__":
-    image = read_im_gs("images/lcd4.png")
+    image = read_im_gs("images/lcd5.png")
 
     binary = preprocess_image(image, threshold_sauvola, windowSize=15, k=0.025)
     markedImage = connectedComponentAnalysis(binary)

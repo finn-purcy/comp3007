@@ -92,20 +92,20 @@ def merge_blobs(blobs, distance):
         if root_a != root_b:
             parent[root_b] = root_a
 
-    # Find blobs that should be merged
+    # find blobs that should be merged
     for i in range(len(blobs)):
         for j in range(i + 1, len(blobs)):
             if boxes_close(blobs[i], blobs[j], distance):
                 union(i, j)
 
-    # Group blobs
+    # group blobs
     groups = {}
 
     for i in range(len(blobs)):
         root = find(i)
         groups.setdefault(root, []).append(blobs[i])
 
-    # Create merged bounding boxes
+    # create merged bounding boxes
     merged = []
 
     for group in groups.values():
@@ -147,26 +147,31 @@ def connectedComponentAnalysis(image):
     # Merge nearby blobs
     merged_blobs = merge_blobs(blobs, distance=30)
 
-    for x, y, w, h in merged_blobs:
-        # draw bounding box
-        cv2.rectangle(
-            marked_image,
-            (x, y),
-            (x + w, y + h),
-            (0, 255, 0),
-            2
-        )
+    filtered_blobs = []
 
-        # Draw component number
-        cv2.putText(
-            marked_image,
-            str(i),
-            (x, y - 5),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.5,
-            (0, 255, 0),
-            1
-        )
+    for x, y, w, h in merged_blobs:
+        if h > 95:
+            filtered_blobs.append([x,y,w,h])
+
+            # draw bounding box
+            cv2.rectangle(
+                marked_image,
+                (x, y),
+                (x + w, y + h),
+                (0, 255, 0),
+                2
+            )
+
+            # Draw component number
+            cv2.putText(
+                marked_image,
+                str(i),
+                (x, y - 5),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5,
+                (0, 255, 0),
+                1
+            )
 
 
 
@@ -181,7 +186,7 @@ def run_task2(image_path, config):
     save_output(output_path, "Task 2 output", output_type='txt')
 
 if __name__ == "__main__":
-    image = read_im_gs("images/lcd5.png")
+    image = read_im_gs("images/lcd2.png")
 
     binary = preprocess_image(image, threshold_sauvola, windowSize=15, k=0.025)
     markedImage = connectedComponentAnalysis(binary)

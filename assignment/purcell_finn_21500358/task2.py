@@ -26,15 +26,15 @@ def read_im_gs(image_path):
     """reads in an image from specified path and converts to greyscale"""
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    return gray
+    return image, gray
 
 def show_image(image, title='test', cmap = 'gray'):
     plt.figure()
-    plt.imshow(image, cmap)
+    plt.imshow(image, cmap = cmap)
     plt.axis('off')
     plt.title(title)
-    plt.show()
     plt.savefig(f'test_out/{title}.png')
+    plt.show()
 
 
 def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
@@ -173,24 +173,60 @@ def connectedComponentAnalysis(image):
                 1
             )
 
-
-
     # Display
     show_image(cv2.cvtColor(marked_image, cv2.COLOR_BGR2RGB), "blob_detection", cmap=None)
 
-    return cv2.cvtColor(marked_image, cv2.COLOR_BGR2RGB)
+    return filtered_blobs
+
+def extractDigits(blobs, originalImage, processedImage, originalFileName):
+    images = []
+
+    originalY, originalX = originalImage.shape[:2]
+    processedY, processedX = processedImage.shape[:2]
+
+    #counteract effect of resize in preprocessing
+    scaleX = originalX/processedX
+    scaleY = originalY/processedY
+
+    digitNumber = 0
+
+    for blob in blobs:
+        digitNumber += 1
+        fileName = f"d{digitNumber}"
+
+        x, y, w, h = blob
+
+        x = int(x*scaleX)
+        w = int(w*scaleX)
+        y = int(y*scaleY)
+        h = int(h*scaleY)
+
+        pad = 20
+        croppedImage=originalImage[max(y-pad, 0): min(y+h+pad, originalY), max(x-pad, 0): min(x+w+pad, originalX)]
+        images.append(croppedImage)
+
+        save_output(f"output/task2/{originalFileName}/d{digitNumber}.png", croppedImage, output_type='image')
+        show_image(croppedImage, "digit", cmap=None)
+
+def lcd_digit_extract(imagePath, fileName):
+    originalImage, gray = read_im_gs(imagePath)
+
+    binary = preprocess_image(gray, threshold_sauvola, windowSize=15, k=0.025)
+    digits = connectedComponentAnalysis(binary)
+
+    extractDigits(digits, originalImage, binary, fileName)
 
 def run_task2(image_path, config):
-    # TODO: Implement task 2 here
-    output_path = f"output/task2/result.txt"
-    save_output(output_path, "Task 2 output", output_type='txt')
+    # TODO: Implement thermo detection & order digits. Then done!
+    imPaths = []
+    for entry in os.listdir(image_path):
+        full_path = os.path.join(image_path, entry)
+        imPaths.append((full_path, entry))
+            
+    for imPath, entry in imPaths:
+        if "lcd" in imPath:
+            lcd_digit_extract(imPath, entry)
+
 
 if __name__ == "__main__":
-    image = read_im_gs("images/lcd2.png")
-
-    binary = preprocess_image(image, threshold_sauvola, windowSize=15, k=0.025)
-    markedImage = connectedComponentAnalysis(binary)
-    
-    print(np.unique(binary))
-
-#save_output("assignment/lastname_firstname_12345678/output/task2/task2output.txt", "bruh")
+    run_task2("/home/21500358/comp3007/assignment/purcell_finn_21500358/task2", "config.txt")

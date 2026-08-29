@@ -125,6 +125,47 @@ def merge_blobs(blobs, distance):
 
     return merged
 
+def order_blobs(blobs):
+    """orders blobs for correct file output"""
+    sysBlobs = []
+    diaBlobs = []
+    pulseBlobs = []
+
+    sysY = 1000 #top number
+    pulseY = 0 #bottom number
+    yTolerance = 150
+
+    #first pass finds correct y values
+    for blob in blobs:
+        blobY = blob[1]
+
+        if blobY < sysY:
+            sysY = blobY
+        if blobY > pulseY:
+            pulseY = blobY
+
+    #second pass groups each blob
+    for blob in blobs:
+        blobY = blob[1]
+
+        if abs(blobY-sysY) < yTolerance:
+            sysBlobs.append(blob)
+        elif abs(blobY-pulseY) < yTolerance:
+            pulseBlobs.append(blob)
+        else:
+            diaBlobs.append(blob)
+
+    #within each group order blobs
+    sysBlobs.sort(key=lambda x: x[0])
+    diaBlobs.sort(key=lambda x: x[0])
+    pulseBlobs.sort(key=lambda x: x[0])
+
+    orderedBlobs = sysBlobs + diaBlobs + pulseBlobs
+
+    return orderedBlobs
+
+        
+
 def connectedComponentAnalysis(image):
     num_labels, ids, stats, centroids = cv2.connectedComponentsWithStats(image, 8)
 
@@ -213,6 +254,7 @@ def lcd_digit_extract(imagePath, fileName):
 
     binary = preprocess_image(gray, threshold_sauvola, windowSize=15, k=0.025)
     digits = connectedComponentAnalysis(binary)
+    digits = order_blobs(digits)
 
     extractDigits(digits, originalImage, binary, fileName)
 

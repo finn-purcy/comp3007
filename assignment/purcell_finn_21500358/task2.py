@@ -1,5 +1,5 @@
 # Author: Finn Purcell
-# Last Modified: 27/08/2026
+# Last Modified: 29/08/2026
 
 import os
 import cv2
@@ -35,6 +35,7 @@ def show_image(image, title='test', cmap = 'gray'):
     plt.title(title)
     plt.savefig(f'test_out/{title}.png')
     plt.show()
+    plt.close()
 
 
 def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
@@ -43,18 +44,17 @@ def preprocess_image(image, threshold=threshold_otsu, windowSize = 15, k=0.2):
     image = cv2.normalize(image, None, 0, 255, cv2.NORM_MINMAX)
     image = cv2.medianBlur(image, 5)
     image = img_as_float(image) #convert to use skilearn thresholding
+
     if threshold == threshold_otsu:
         th = threshold(image)
+    elif threshold == None:
+        return img_as_ubyte(image)
     else:
         th = threshold(image, windowSize, k) #statistical thresholds require additional params
+
     binary_im = image > th
 
     cv_im = img_as_ubyte(binary_im) #convert back to openCV
-
-    #kernel = np.ones((5, 5), np.uint8)
-    #combined = cv2.dilate(cv_im, kernel, iterations=1)
-
-    #cv_im = cv2.medianBlur(cv_im, 7)
     
     show_image(cv_im, title = "binary_image", cmap='binary')
 
@@ -258,6 +258,40 @@ def lcd_digit_extract(imagePath, fileName):
 
     extractDigits(digits, originalImage, binary, fileName)
 
+def thermo_find_level(imagePath, fileName):
+    originalImage, gray = read_im_gs(imagePath)
+
+    ppImage = preprocess_image(gray)
+    edges = cv2.Canny(ppImage, 50, 150, apertureSize= 5)
+
+    lines = cv2.HoughLinesP(edges,1,np.pi/180,100,minLineLength=90,maxLineGap=20)
+
+    ppImage = cv2.cvtColor(ppImage, cv2.COLOR_GRAY2BGR)
+
+    if lines is not None:
+        for line in lines:
+            x1,y1,x2,y2 = line
+            if abs(x1-x2) < 10:
+                cv2.line(ppImage,(x1,y1),(x2,y2),(0,255,0),2)
+                thermoY = np.min([y1, y2])
+                thermoX = x1
+    
+    originalY, originalX = originalImage.shape[:2]
+    processedY, processedX = ppImage.shape[:2]
+
+    #counteract effect of resize in preprocessing
+    pad = 300
+    scaleX = originalX/processedX
+    scaleY = originalY/processedY
+
+    thermEndY = int(thermoY * scaleY)
+    thermEndX = int(thermoX * scaleX)
+
+    croppedImage = originalImage[max(thermEndY-pad, 0): min(thermEndY+pad, originalY), max(thermEndX-pad, 0): min(thermEndX+pad, originalX)]    
+    
+
+    save_output(f"output/task2/{fileName}/t.png", croppedImage, output_type='image')
+
 def run_task2(image_path, config):
     # TODO: Implement thermo detection & order digits. Then done!
     imPaths = []
@@ -267,7 +301,11 @@ def run_task2(image_path, config):
             
     for imPath, entry in imPaths:
         if "lcd" in imPath:
-            lcd_digit_extract(imPath, entry)
+            pass
+            #lcd_digit_extract(imPath, entry)
+
+        else:
+            thermo_find_level(imPath, entry)
 
 
 if __name__ == "__main__":

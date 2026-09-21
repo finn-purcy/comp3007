@@ -55,4 +55,88 @@ Logging results to [1m/home/21500358/comp3007/assignment/purcell_finn_21500358/
 Starting training for 30 epochs...
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
-[K       1/30         0G      1.596      3.623      3.885    0.06675   …[0m: 7% ╸─────────── 7/89 6.3s/it 48.4s<8:37
+[K       1/30         0G     0.9186      1.447       2.19    0.03525      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.8s/it 8:36
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.7s
+                   all         62         56      0.987      0.956      0.982      0.858
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       2/30         0G     0.7026     0.5589      1.387    0.02833      …[0m: 100% ━━━━━━━━━━━━ 89/89 6.0s/it 8:56
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.5s
+                   all         62         56      0.968          1      0.994      0.904
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       3/30         0G     0.6581     0.4777      1.277    0.03137      …[0m: 100% ━━━━━━━━━━━━ 89/89 6.3s/it 9:17
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.5s
+                   all         62         56      0.988      0.996      0.992      0.878
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       4/30         0G     0.6238      0.451       1.21    0.02555      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.7s/it 8:30
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.994          1      0.995      0.887
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       5/30         0G     0.5975     0.4155      1.185    0.02419      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:18
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.5s
+                   all         62         56      0.978      0.986      0.993      0.891
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       6/30         0G     0.5673     0.3992      1.155    0.02152      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.8s/it 8:33
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.985      0.989      0.995       0.91
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       7/30         0G     0.5695     0.3917      1.152    0.02365      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:20
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.996          1      0.995        0.9
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       8/30         0G     0.5399     0.3701       1.13    0.02008      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:19
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.7s
+                   all         62         56      0.971          1      0.993      0.922
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       9/30         0G     0.5274     0.3554        1.1    0.02133      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:20
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.986          1      0.995      0.936
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K      10/30         0G      0.511     0.3498      1.095    0.01864      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.8s/it 8:39
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.5s
+                   all         62         56      0.983      0.999      0.994      0.911
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K      11/30         0G     0.5063     0.3417      1.087    0.01841      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:19
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.996      0.988      0.995      0.932
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K      12/30         0G     0.4927     0.3279       1.06    0.01597      …[0m: 100% ━━━━━━━━━━━━ 89/89 5.5s/it 8:14
+[K                 Class     Images  Instances      Box(P          R      mA…[0m: 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.4s
+                   all         62         56      0.972          1      0.988      0.921
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K      13/30         0G     0.4736     0.3255      1.047    0.01462         10        512: 100% ━━━━━━━━━━━━ 89/89 5.8s/it 8:352.0ss
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 1.7s/it 3.3s6.4s
+                   all         62         56      0.966          1      0.993      0.933
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K      14/30         0G     0.4741     0.3204      1.055    0.01401         14        512: 100% ━━━━━━━━━━━━ 89/89 5.6s/it 8:161.9ss
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 1.8s/it 3.6s7.0s
+                   all         62         56      0.998      0.989      0.995      0.926
+[34m[1mEarlyStopping: [0mTraining stopped early as no improvement observed in last 5 epochs. Best results observed at epoch 9, best model saved as best.pt.
+To update EarlyStopping(patience=5) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+14 epochs completed in 2.006 hours.
+Optimizer stripped from /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2/weights/last.pt, 23.1MB
+Optimizer stripped from /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2/weights/best.pt, 23.1MB
+
+Validating /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2/weights/best.pt...
+Ultralytics 8.4.157 🚀 Python-3.13.9 torch-2.10.0 CPU (12th Gen Intel Core i9-12900)
+YOLOv8s-obb summary (fused): 81 layers, 11,412,345 parameters, 0 gradients, 29.4 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 1.1s/it 2.2s4.2s
+                   all         62         56      0.986          1      0.995      0.936
+                   bpm         40         40      0.975          1      0.995      0.967
+                thermo         16         16      0.997          1      0.995      0.905
+Speed: 0.4ms preprocess, 32.4ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1m/home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2[0m
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 14 that is less than the current step 16. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.

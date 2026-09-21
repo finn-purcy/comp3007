@@ -293,7 +293,6 @@ def thermo_find_level(imagePath, fileName):
     save_output(f"output/task2/{fileName}/t.png", croppedImage, output_type='image')
 
 def run_task2(image_path, config):
-    # TODO: Implement thermo detection & order digits. Then done!
     imPaths = []
     for entry in os.listdir(image_path):
         full_path = os.path.join(image_path, entry)
@@ -301,8 +300,7 @@ def run_task2(image_path, config):
             
     for imPath, entry in imPaths:
         if "lcd" in imPath:
-            pass
-            #lcd_digit_extract(imPath, entry)
+            lcd_digit_extract(imPath, entry)
 
         else:
             thermo_find_level(imPath, entry)

@@ -1,0 +1,58 @@
+Overriding model.yaml nc=15 with nc=2
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]
+ 22        [15, 18, 21]  1   2403001  ultralytics.nn.modules.head.OBB              [2, 1, 16, None, [128, 256, 512]]
+YOLOv8s-obb summary: 144 layers, 11,422,553 parameters, 11,422,537 gradients, 29.6 GFLOPs
+
+Transferred 391/397 items from pretrained weights
+WARNING ⚠️ imgsz=[500] must be multiple of max stride 32, updating to [512]
+Freezing layer 'model.22.dfl.conv.weight'
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 0.2±0.3 ms, read: 15.5±3.5 MB/s, size: 22.6 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_215…[0m: 100% ━━━━━━━━━━━━ 2832/2832 1.8Kit/s 1.6s
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.7347486387a63c3bae34716930bc9b41.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0270151]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.9b5e49c7fc096cdc34d25607a0c74185.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0349966]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.e5db2066101773d0e531a271bf9ee4ed.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0164136]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.99b769dcb9f4e5d4f8ea8fac5e03f592.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0153127]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.1003e67849fa5b5fc05f78a3abe47bed.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0696453]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.2e7c1d3868fe29ac69b00c286f3a2fc4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0433018]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.57bfcfdcfc8167d54b6b110638262b52.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0968877]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.2a3e6d630f0c4bc9b3090ed23a00b9d0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0444986]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.48593e87321512338a42b1c0a88ea0b3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.051279]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.7de105ebe836dd85dce631f7d307da5c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.034679]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.bf34b1bced120834c3ca7df368739f2e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0189866]
+[34m[1mtrain: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels.cache
+WARNING ⚠️ [34m[1mval: [0mSlow image access detected (ping: 0.8±0.1 ms, read: 29.5±14.8 MB/s, size: 42.8 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/…[0m: 100% ━━━━━━━━━━━━ 62/62 1.1Kit/s 0.1s
+[34m[1mval: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels.cache
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+Plotting labels to /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2/labels.jpg...
+Using 2821 train, 62 val images for fraction=1.0 at imgsz=512
+Using 0 dataloader workers
+Logging results to [1m/home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2[0m
+Starting training for 30 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K       1/30         0G      1.596      3.623      3.885    0.06675   …[0m: 7% ╸─────────── 7/89 6.3s/it 48.4s<8:37

@@ -13,10 +13,50 @@
 # limitations under the License.
 
 
-# Author: [Your Name]
-# Last Modified: 2024-09-09
+# Author: Finn J. Purcell
+# Last Modified: 20-09-2026
 
 import os
+from ultralytics import YOLO
+import glob
+import wandb
+import cv2
+from PIL import Image
+
+wandb.login(key="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")
+
+
+def train_model():
+    DATA_YAML = "data/data.yaml"
+
+    EPOCHS = 30
+    BATCH = 32
+    IMGSZ = 500
+
+
+    yolo = YOLO("yolov8s-obb.pt")
+
+    yolo.train(
+        data = DATA_YAML,
+        epochs = EPOCHS,
+        batch = BATCH,
+        imgsz = IMGSZ,
+        patience = 5,
+    )
+
+    return yolo
+
+def predict(model, imagePath):
+    imPaths = []
+
+
+    for entry in os.listdir(imagePath):
+        full_path = os.path.join(imagePath, entry)
+        imPaths.append((full_path, entry))
+            
+    for imPath, entry in imPaths:
+        out = model(imPath, device="CPU")
+        Image.fromarray(out[0].plot()[:,:,::-1])
 
 
 def save_output(output_path, content, output_type='txt'):
@@ -36,5 +76,9 @@ def save_output(output_path, content, output_type='txt'):
 
 def run_task1(image_path, config):
     # TODO: Implement task 1 here
-    output_path = f"output/task1/result.txt"
-    save_output(output_path, "Task 1 output", output_type='txt')
+    print("TRAINING")
+    model = train_model()
+    print("INFERENCE")
+
+if __name__ == "__main__":
+    run_task1("btuh", "tg")

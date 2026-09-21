@@ -1,0 +1,108 @@
+[KDownloading https://ultralytics.com/assets/Arial.ttf to '/home/21500358/.config/…[0m: 100% ━━━━━━━━━━━━ 755.1KB 35.6MB/s 0.0s
+Overriding model.yaml nc=15 with nc=2
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]
+ 22        [15, 18, 21]  1   2403001  ultralytics.nn.modules.head.OBB              [2, 1, 16, None, [128, 256, 512]]
+YOLOv8s-obb summary: 144 layers, 11,422,553 parameters, 11,422,537 gradients, 29.6 GFLOPs
+
+Transferred 391/397 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 0.9±0.1 ms, read: 11.9±1.8 MB/s, size: 34.6 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data…[0m: 100% ━━━━━━━━━━━━ 1888/1888 916.9it/s 2.1s
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165630_jpg.rf.6ec9858a01532c63a540575118fa978a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0246196]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165630_jpg.rf.e44bdd01faebb185dafcbb12a25d1daf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0112782]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165644_jpg.rf.935c5c1129c3c28268db4835ab81e061.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0521576]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.6bdbea1fc9b87ac67b824523764f09eb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0293545]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.c3030773c450fe20d7c70f1240edee3b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0869622]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.77ea991a2af071576058e27653c91f89.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0770636]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.e2ec9b32e5c81f9346d69c04cdf031a8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0274996]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.22fda0f87b1dce56bd1f5b3a27a9a5ee.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0571064]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.53d9c2a52e70dd1bd389413d23c0d88a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0142807]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.3820efd6702696d142fc055f06428d9d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0194232]
+[34m[1mtrain: [0m/home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.442266fd22dae45648ce41da82e4db45.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [1.0399547]
+[34m[1mtrain: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels.cache
+WARNING ⚠️ [34m[1mval: [0mSlow image access detected (ping: 0.7±0.0 ms, read: 17.6±7.6 MB/s, size: 46.0 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid…[0m: 100% ━━━━━━━━━━━━ 62/62 824.3it/s 0.1s
+[34m[1mval: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels.cache
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+Plotting labels to /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train/labels.jpg...
+Using 1877 train, 62 val images for fraction=1.0 at imgsz=576
+Using 0 dataloader workers
+Logging results to [1m/home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train[0m
+Starting training for 7 epochs...
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        1/7         0G     0.9105      1.558      2.341    0.05094          5    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.4s/it 6:38
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.8s
+                   all         62         55       0.89      0.945       0.96      0.661
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        2/7         0G     0.7315     0.6431      1.687    0.05022          5    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.3s/it 6:34
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.7s
+                   all         62         55      0.917      0.917      0.965      0.754
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        3/7         0G     0.6631     0.5186      1.654    0.04516          5    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.4s/it 6:39
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.9s
+                   all         62         55      0.981       0.98      0.985      0.834
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        4/7         0G     0.6262     0.4892      1.515    0.04426          5    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.5s/it 6:55
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.3s/it 5.1s
+                   all         62         55      0.977      0.987      0.973      0.793
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        5/7         0G     0.5677     0.4301      1.456    0.03623          4    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.4s/it 6:44
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.9s
+                   all         62         55       0.98      0.987      0.982      0.849
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        6/7         0G     0.5355      0.407      1.394    0.03056          4    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.4s/it 6:39
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.8s
+                   all         62         55      0.954      0.998      0.984      0.892
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss angle_loss  Instances       Size
+[K        7/7         0G      0.478     0.3695      1.332    0.02303          5    …[0m: 100% ━━━━━━━━━━━━ 118/118 3.4s/it 6:39
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.2s/it 4.9s
+                   all         62         55      0.984       0.99      0.984      0.902
+
+7 epochs completed in 0.794 hours.
+Optimizer stripped from /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train/weights/last.pt, 23.1MB
+Optimizer stripped from /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train/weights/best.pt, 23.1MB
+
+Validating /home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train/weights/best.pt...
+/home/21500358/anaconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:1174: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+Ultralytics 8.4.157 🚀 Python-3.13.9 torch-2.14.0+cu130 CPU (12th Gen Intel Core i9-12900)
+YOLOv8s-obb summary (fused): 81 layers, 11,412,345 parameters, 0 gradients, 29.4 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-…[0m: 100% ━━━━━━━━━━━━ 4/4 1.4it/s 2.9s
+                   all         62         55      0.984       0.99      0.984      0.902
+                   bpm         39         39      0.975       0.98      0.973      0.935
+                thermo         16         16      0.993          1      0.995       0.87
+Speed: 0.6ms preprocess, 43.5ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1m/home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train[0m
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 7 that is less than the current step 9. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.

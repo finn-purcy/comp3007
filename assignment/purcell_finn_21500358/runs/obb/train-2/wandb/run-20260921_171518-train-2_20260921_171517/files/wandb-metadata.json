@@ -1,0 +1,28 @@
+{
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.13.9",
+  "startedAt": "2026-09-21T09:15:18.230229Z",
+  "program": "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py",
+  "codePath": "assignment/purcell_finn_21500358/task1.py",
+  "codePathLocal": "task1.py",
+  "git": {
+    "remote": "https://github.com/finn-purcy/comp3007.git",
+    "commit": "d12962cbad06a635c2136f136dd76f2e4e398c4b"
+  },
+  "email": "21500358@student.curtin.edu.au",
+  "root": "/home/21500358/comp3007/assignment/purcell_finn_21500358/runs/obb/train-2",
+  "host": "lab232-a04",
+  "executable": "/home/21500358/anaconda3/bin/python",
+  "cpu_count": 16,
+  "cpu_count_logical": 24,
+  "disk": {
+    "/": {
+      "total": "1006455631872",
+      "used": "84371771392"
+    }
+  },
+  "memory": {
+    "total": "33307299840"
+  },
+  "writerId": "pcpm9y3cvg0abbhivtd55ymttsstm4ju"
+}

@@ -22,26 +22,64 @@ import glob
 import wandb
 import cv2
 from PIL import Image
+import numpy as np
 
 wandb.login(key="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")
+
+class OriginalImage():
+    def __init__(self, image):
+        self.image = image
+        self.x = image[1]
+        self.y = image[0]
+
+        self.dx = self.x/500
+        self.dy = self.y/500
+
+    def relocatePoints(self, newPoints):
+        """takes resized points and tranlates to points on original image"""
+        transformX = newPoints[0]
+        transformY = newPoints[1]
+
+        originalX = int(transformX*self.dx)
+        originalY = int(transformY*self.dy)
+
+        return (originalX, originalY)
+
+    def perspectiveTransform(self, transformCorners):
+        """creates transformed image
+        transform corner must be bl, tl, br, tr in (y,x)"""
+        originalCorners = np.float32([[0,0],[self.y, 0], [0,self.x], [self.y,self.x]])
+
+        matrix = cv2.getPerspectiveTransform(transformCorners, originalCorners)
+        result  =cv2.warpPerspective(self.image, matrix, (600,600))        
+
+
+        
+
+def preprocess_image(image):
+    """applies same preprocessing steps as training images for best model performance
+    image = opencv image"""
+    resize = cv2.resize(image, (500, 500), interpolation=cv2.INTER_LINEAR)
+
 
 
 def train_model():
     DATA_YAML = "data/data.yaml"
 
     EPOCHS = 30
-    BATCH = 32
+    BATCH = 64
     IMGSZ = 500
 
 
-    yolo = YOLO("yolov8s-obb.pt")
+    yolo = YOLO("yolov8n-obb.pt")
 
     yolo.train(
         data = DATA_YAML,
         epochs = EPOCHS,
         batch = BATCH,
         imgsz = IMGSZ,
-        patience = 5,
+        patience = 10,
+        device='cuda',
     )
 
     return yolo
@@ -82,3 +120,5 @@ def run_task1(image_path, config):
 
 if __name__ == "__main__":
     run_task1("btuh", "tg")
+
+    """lab232-b01"""

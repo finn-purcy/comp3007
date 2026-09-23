@@ -247,6 +247,7 @@ def extractDigits(blobs, originalImage, processedImage, originalFileName):
         images.append(croppedImage)
 
         save_output(f"output/task2/{originalFileName}/d{digitNumber}.png", croppedImage, output_type='image')
+
         show_image(croppedImage, "digit", cmap=None)
 
 def lcd_digit_extract(imagePath, fileName):
@@ -300,6 +301,7 @@ def run_task2(image_path, config):
             
     for imPath, entry in imPaths:
         if "lcd" in imPath:
+            print("A")
             lcd_digit_extract(imPath, entry)
 
         else:
@@ -307,4 +309,4 @@ def run_task2(image_path, config):
 
 
 if __name__ == "__main__":
-    run_task2("/home/21500358/comp3007/assignment/purcell_finn_21500358/task2", "config.txt")
+    run_task2("/home/21500358/comp3007/assignment/purcell_finn_21500358/output/task1", "config.txt")

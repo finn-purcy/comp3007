@@ -1,3 +1,4 @@
+path: /home/21500358/comp3007/assignment/purcell_finn_21500358/data
 train: train/images
 val: valid/images
 test: test/images

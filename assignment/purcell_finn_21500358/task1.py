@@ -1,18 +1,3 @@
-
-
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-
 # Author: Finn J. Purcell
 # Last Modified: 20-09-2026
 
@@ -23,14 +8,15 @@ import wandb
 import cv2
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
-wandb.login(key="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")
+#wandb.login(key="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")
 
 class OriginalImage():
     def __init__(self, image):
         self.image = image
-        self.x = image[1]
-        self.y = image[0]
+        self.x = image.shape[1]
+        self.y = image.shape[0]
 
         self.dx = self.x/500
         self.dy = self.y/500
@@ -46,12 +32,14 @@ class OriginalImage():
         return (originalX, originalY)
 
     def perspectiveTransform(self, transformCorners):
-        """creates transformed image
-        transform corner must be bl, tl, br, tr in (y,x)"""
-        originalCorners = np.float32([[0,0],[self.y, 0], [0,self.x], [self.y,self.x]])
+        """creates transformed image"""
+        
+        originalCorners = np.float32([[0,self.y], [self.x,self.y], [self.x, 0], [0,0]])
 
-        matrix = cv2.getPerspectiveTransform(transformCorners, originalCorners)
-        result  =cv2.warpPerspective(self.image, matrix, (600,600))        
+        matrix = cv2.getPerspectiveTransform(transformCorners.cpu().numpy(), originalCorners)
+        result  =cv2.warpPerspective(self.image, matrix, (self.x,self.y)) 
+
+        save_output(f"output/task1/testingT1.png", result, output_type='image')
 
 
         
@@ -66,19 +54,18 @@ def preprocess_image(image):
 def train_model():
     DATA_YAML = "data/data.yaml"
 
-    EPOCHS = 30
-    BATCH = 64
+    EPOCHS = 100
+    BATCH = 128
     IMGSZ = 500
 
-
-    yolo = YOLO("yolov8n-obb.pt")
+    yolo = YOLO("yolov8s-obb.pt")
 
     yolo.train(
         data = DATA_YAML,
         epochs = EPOCHS,
         batch = BATCH,
         imgsz = IMGSZ,
-        patience = 10,
+        patience = 15,
         device='cuda',
     )
 
@@ -95,6 +82,26 @@ def predict(model, imagePath):
     for imPath, entry in imPaths:
         out = model(imPath, device="CPU")
         Image.fromarray(out[0].plot()[:,:,::-1])
+
+def inference(ptFile = "runs/obb/train2/weights/best.pt"):
+    yolo = YOLO(ptFile)
+
+    imRead = cv2.imread("data/test/images/IMG_7585_jpeg.rf.38d6ea90f4dfdcb578e3bd4c4dc4d4f0.jpg")
+    Image = OriginalImage(imRead)
+
+    results = yolo("data/test/images/IMG_7585_jpeg.rf.38d6ea90f4dfdcb578e3bd4c4dc4d4f0.jpg")
+    print(f"results: {results}")
+    for result in results:
+        obb = result.obb
+        for corners, confidence, cls in zip(
+            obb.xyxyxyxy,
+            obb.conf,
+            obb.cls
+        ):
+            print("Corners:", corners)
+            print("Confidence:", confidence)
+            print("Class:", cls)
+            Image.perspectiveTransform(corners)
 
 
 def save_output(output_path, content, output_type='txt'):
@@ -119,6 +126,6 @@ def run_task1(image_path, config):
     print("INFERENCE")
 
 if __name__ == "__main__":
-    run_task1("btuh", "tg")
-
+    #run_task1("btuh", "tg")
+    inference()
     """lab232-b01"""

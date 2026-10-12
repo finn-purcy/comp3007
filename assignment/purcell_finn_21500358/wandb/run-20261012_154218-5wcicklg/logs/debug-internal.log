@@ -1,0 +1,12 @@
+{"time":"2026-10-12T15:42:19.026535844+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-10-12T15:42:19.688235205+08:00","level":"INFO","msg":"stream: created new stream","id":"5wcicklg"}
+{"time":"2026-10-12T15:42:19.688289195+08:00","level":"INFO","msg":"stream: started","id":"5wcicklg"}
+{"time":"2026-10-12T15:42:19.688354703+08:00","level":"INFO","msg":"writer: started","stream_id":"5wcicklg"}
+{"time":"2026-10-12T15:42:19.688403586+08:00","level":"INFO","msg":"handler: started","stream_id":"5wcicklg"}
+{"time":"2026-10-12T15:42:19.688440716+08:00","level":"INFO","msg":"sender: started","stream_id":"5wcicklg"}
+{"time":"2026-10-12T15:43:28.043580847+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-5wcicklg-curvesRecall-ConfidenceB_table-mqWgXQ","runtime_seconds":1.542347701,"subtasks":[{"desc":"curves/Recall-Confidence(B)_table.table.json","runtime_seconds":0.175626645,"progress":"14.4KB/14.4KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.188156287,"progress":"10.2KB/10.2KB"}],"total_operations":2}}
+{"time":"2026-10-12T15:43:29.546872639+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-12T15:43:30.184795286+08:00","level":"INFO","msg":"stream: closing","id":"5wcicklg"}
+{"time":"2026-10-12T15:43:30.184831033+08:00","level":"INFO","msg":"handler: closed","stream_id":"5wcicklg"}
+{"time":"2026-10-12T15:43:30.185890525+08:00","level":"INFO","msg":"sender: closed","stream_id":"5wcicklg"}
+{"time":"2026-10-12T15:43:30.185917261+08:00","level":"INFO","msg":"stream: closed","id":"5wcicklg"}

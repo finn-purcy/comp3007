@@ -1,0 +1,12 @@
+{"time":"2026-09-23T15:49:17.059868584+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-23T15:49:17.707537662+08:00","level":"INFO","msg":"stream: created new stream","id":"xyklineo"}
+{"time":"2026-09-23T15:49:17.707662829+08:00","level":"INFO","msg":"stream: started","id":"xyklineo"}
+{"time":"2026-09-23T15:49:17.707843266+08:00","level":"INFO","msg":"writer: started","stream_id":"xyklineo"}
+{"time":"2026-09-23T15:49:17.707889736+08:00","level":"INFO","msg":"sender: started","stream_id":"xyklineo"}
+{"time":"2026-09-23T15:49:17.708074289+08:00","level":"INFO","msg":"handler: started","stream_id":"xyklineo"}
+{"time":"2026-09-23T16:38:43.814495424+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run_xyklineo_model","runtime_seconds":1.516054303},{"desc":"uploading config.yaml","runtime_seconds":0.039661467,"progress":"4.7KB/4.7KB"}],"total_operations":2}}
+{"time":"2026-09-23T16:38:49.482603376+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-23T16:38:50.366786799+08:00","level":"INFO","msg":"stream: closing","id":"xyklineo"}
+{"time":"2026-09-23T16:38:50.366837281+08:00","level":"INFO","msg":"handler: closed","stream_id":"xyklineo"}
+{"time":"2026-09-23T16:38:50.368922208+08:00","level":"INFO","msg":"sender: closed","stream_id":"xyklineo"}
+{"time":"2026-09-23T16:38:50.368963643+08:00","level":"INFO","msg":"stream: closed","id":"xyklineo"}

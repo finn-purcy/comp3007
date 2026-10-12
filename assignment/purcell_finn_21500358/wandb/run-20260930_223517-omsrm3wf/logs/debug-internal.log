@@ -1,0 +1,12 @@
+{"time":"2026-09-30T22:35:18.222482583+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-30T22:35:18.853348601+08:00","level":"INFO","msg":"stream: created new stream","id":"omsrm3wf"}
+{"time":"2026-09-30T22:35:18.853437051+08:00","level":"INFO","msg":"stream: started","id":"omsrm3wf"}
+{"time":"2026-09-30T22:35:18.853565756+08:00","level":"INFO","msg":"writer: started","stream_id":"omsrm3wf"}
+{"time":"2026-09-30T22:35:18.853670157+08:00","level":"INFO","msg":"sender: started","stream_id":"omsrm3wf"}
+{"time":"2026-09-30T22:35:18.853761973+08:00","level":"INFO","msg":"handler: started","stream_id":"omsrm3wf"}
+{"time":"2026-09-30T23:49:06.84771193+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-omsrm3wf-curvesPrecision-ConfidenceP_table-jRejOQ","runtime_seconds":3.039645842},{"desc":"uploading artifact run-omsrm3wf-curvesRecall-ConfidenceP_table-4b_FEg","runtime_seconds":1.515608191},{"desc":"uploading config.yaml","runtime_seconds":0.130869649,"progress":"15.6KB/15.6KB"}],"total_operations":3}}
+{"time":"2026-09-30T23:49:08.659328389+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-30T23:49:09.326489569+08:00","level":"INFO","msg":"stream: closing","id":"omsrm3wf"}
+{"time":"2026-09-30T23:49:09.326521185+08:00","level":"INFO","msg":"handler: closed","stream_id":"omsrm3wf"}
+{"time":"2026-09-30T23:49:09.328569804+08:00","level":"INFO","msg":"sender: closed","stream_id":"omsrm3wf"}
+{"time":"2026-09-30T23:49:09.329359865+08:00","level":"INFO","msg":"stream: closed","id":"omsrm3wf"}

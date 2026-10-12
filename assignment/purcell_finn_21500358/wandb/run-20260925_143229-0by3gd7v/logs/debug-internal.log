@@ -1,0 +1,12 @@
+{"time":"2026-09-25T14:32:29.272295262+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-25T14:32:29.932467024+08:00","level":"INFO","msg":"stream: created new stream","id":"0by3gd7v"}
+{"time":"2026-09-25T14:32:29.932547776+08:00","level":"INFO","msg":"stream: started","id":"0by3gd7v"}
+{"time":"2026-09-25T14:32:29.932581535+08:00","level":"INFO","msg":"writer: started","stream_id":"0by3gd7v"}
+{"time":"2026-09-25T14:32:29.93258793+08:00","level":"INFO","msg":"sender: started","stream_id":"0by3gd7v"}
+{"time":"2026-09-25T14:32:29.932611861+08:00","level":"INFO","msg":"handler: started","stream_id":"0by3gd7v"}
+{"time":"2026-09-25T15:15:32.448710309+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-0by3gd7v-curvesPrecision-ConfidenceP_table-z8YTow","runtime_seconds":2.90254944},{"desc":"uploading artifact run-0by3gd7v-curvesRecall-ConfidenceP_table-z0JZbw","runtime_seconds":1.552042183},{"desc":"uploading output.log","runtime_seconds":0.669944075,"progress":"40.0KB/40.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.08150676,"progress":"15.6KB/15.6KB"}],"total_operations":4}}
+{"time":"2026-09-25T15:15:34.487810809+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-25T15:15:35.066151385+08:00","level":"INFO","msg":"stream: closing","id":"0by3gd7v"}
+{"time":"2026-09-25T15:15:35.066193327+08:00","level":"INFO","msg":"handler: closed","stream_id":"0by3gd7v"}
+{"time":"2026-09-25T15:15:35.068115113+08:00","level":"INFO","msg":"sender: closed","stream_id":"0by3gd7v"}
+{"time":"2026-09-25T15:15:35.068158047+08:00","level":"INFO","msg":"stream: closed","id":"0by3gd7v"}

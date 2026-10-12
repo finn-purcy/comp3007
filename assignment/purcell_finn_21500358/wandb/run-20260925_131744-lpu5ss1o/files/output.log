@@ -1,0 +1,38 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[600] must be multiple of max stride 32, updating to [608]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/train/labels.cache... 2694 images[0m
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/valid/labels.cache... 104 images, 9[0m
+Plotting labels to runs/pose/train6/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 608 train, 608 val
+Using 8 dataloader workers
+Logging results to [1mruns/pose/train6[0m
+Starting training for 2 epochs...
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+        1/2      6.73G      1.038      2.935      0.628      1.708      1.308          9        608: 100%|██████████| 85/
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50
+                   all        104         95      0.601      0.851      0.832      0.577      0.606      0.868      0.881      0.496
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+        2/2      6.71G     0.7232     0.7884     0.4872     0.7247      1.044         14        608: 100%|██████████| 85/
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50
+                   all        104         95      0.981      0.998      0.994       0.88      0.981      0.998      0.994      0.863
+
+2 epochs completed in 0.019 hours.
+Optimizer stripped from runs/pose/train6/weights/last.pt, 23.1MB
+Optimizer stripped from runs/pose/train6/weights/best.pt, 23.1MB
+
+Validating runs/pose/train6/weights/best.pt...
+Ultralytics YOLOv8.2.99 🚀 Python-3.10.12 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 3060, 11887MiB)
+YOLOv8s-pose summary (fused): 187 layers, 11,413,434 parameters, 0 gradients, 29.4 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50
+                   all        104         95      0.981      0.998      0.994      0.881      0.981      0.998      0.994      0.863
+                   bpm         68         68      0.999          1      0.995      0.913      0.999          1      0.995      0.895
+                thermo         27         27      0.964      0.996      0.994      0.849      0.964      0.996      0.994      0.831
+Speed: 0.7ms preprocess, 4.7ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/pose/train6[0m

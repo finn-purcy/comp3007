@@ -1,0 +1,130 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt to 'yolov8n.pt'...
+100%|███████████████████████████████████████████████████████████████████████████████| 6.25M/6.25M [00:00<00:00, 96.9MB/s]
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[500] must be multiple of max stride 32, updating to [512]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels... 2832 images, 183 background[0m
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.7347486387a63c3bae34716930bc9b41.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.027]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.9b5e49c7fc096cdc34d25607a0c74185.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.035]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.e5db2066101773d0e531a271bf9ee4ed.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0164]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.99794162f8b71935ce8c2e3958377801.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0005]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.99b769dcb9f4e5d4f8ea8fac5e03f592.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0153]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.1003e67849fa5b5fc05f78a3abe47bed.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0696]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.2e7c1d3868fe29ac69b00c286f3a2fc4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0433]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.57bfcfdcfc8167d54b6b110638262b52.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0969]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.2a3e6d630f0c4bc9b3090ed23a00b9d0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0445]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.3c255edfa85bafcff3fe57748cc124c3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.48593e87321512338a42b1c0a88ea0b3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0513]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.08d75a320a3167375ceec33ee45cc5ce.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0099]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.7de105ebe836dd85dce631f7d307da5c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0347]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.bf34b1bced120834c3ca7df368739f2e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.019]
+[34m[1mtrain: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels.cache
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels... 62 images, 6 backgrounds, 0 c[0m
+[34m[1mval: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels.cache
+Plotting labels to runs/obb/train10/labels.jpg...
+
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+Exception in thread Thread-17 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+Exception in thread   File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/threading.py", line 953, in run
+Thread-29 (_pin_memory_loop):
+    self._target(*self._args, **self._kwargs)Traceback (most recent call last):
+
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 61, in _pin_memory_loop
+    self.run()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/threading.py", line 953, in run
+        self._target(*self._args, **self._kwargs)do_one_step()
+
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 61, in _pin_memory_loop
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 37, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    do_one_step()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 37, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 541, in rebuild_storage_fd
+    return _ForkingPickler.loads(res)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 541, in rebuild_storage_fd
+    fd = df.detach()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    fd = df.detach()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+      File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+with _resource_sharer.get_connection(self._id) as conn:
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/connection.py", line 502, in Client
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/connection.py", line 502, in Client
+    c = SocketClient(address)
+    c = SocketClient(address)  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/connection.py", line 630, in SocketClient
+
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/multiprocessing/connection.py", line 630, in SocketClient
+    s.connect(address)
+    FileNotFoundErrors.connect(address):
+[Errno 2] No such file or directoryFileNotFoundError
+: [Errno 2] No such file or directory
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 512 train, 512 val
+Using 8 dataloader workers
+Logging results to [1mruns/obb/train10[0m
+Starting training for 30 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+  0%|          | 0/45 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 367, in _do_train
+    for i, batch in pbar:
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/data/build.py", line 48, in __iter__
+    yield next(self.iterator)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1448, in _get_data
+    raise RuntimeError("Pin memory thread exited unexpectedly")
+RuntimeError: Pin memory thread exited unexpectedly
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 367, in _do_train
+    for i, batch in pbar:
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/data/build.py", line 48, in __iter__
+    yield next(self.iterator)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1448, in _get_data
+    raise RuntimeError("Pin memory thread exited unexpectedly")
+RuntimeError: Pin memory thread exited unexpectedly

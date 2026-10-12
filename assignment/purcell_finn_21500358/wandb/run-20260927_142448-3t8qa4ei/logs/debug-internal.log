@@ -1,0 +1,7 @@
+{"time":"2026-09-27T14:24:49.635712225+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-27T14:24:50.265678865+08:00","level":"INFO","msg":"stream: created new stream","id":"3t8qa4ei"}
+{"time":"2026-09-27T14:24:50.265730954+08:00","level":"INFO","msg":"stream: started","id":"3t8qa4ei"}
+{"time":"2026-09-27T14:24:50.26584243+08:00","level":"INFO","msg":"writer: started","stream_id":"3t8qa4ei"}
+{"time":"2026-09-27T14:24:50.265927476+08:00","level":"INFO","msg":"sender: started","stream_id":"3t8qa4ei"}
+{"time":"2026-09-27T14:24:50.265946805+08:00","level":"INFO","msg":"handler: started","stream_id":"3t8qa4ei"}
+{"time":"2026-09-27T17:10:10.306723218+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/finnpurcell-curtin-university/YOLOv8/3t8qa4ei/file_stream\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}

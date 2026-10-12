@@ -1,0 +1,19 @@
+[Student Information]
+Surname: Purcell
+GivenNames: Finn Joseph
+StudentID: 21500358
+
+[Task 1]
+model_path: rotate_small.pt
+output_path: thermo_train/task1
+
+[Task 2]
+output_path: thermo_train/task2
+
+[Task 3]
+model_path: best_knn.joblib
+output_path: output/task3
+
+[Task 4]
+bug_fixing: False
+output_path: output/task4

@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2026-09-23T06:00:53.423286Z",
+  "program": "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py",
+  "codePath": "assignment/purcell_finn_21500358/task1.py",
+  "codePathLocal": "task1.py",
+  "git": {
+    "remote": "https://github.com/finn-purcy/comp3007.git",
+    "commit": "3e38492bd70471ba6f25f569e088a684fdc3109c"
+  },
+  "email": "21500358@student.curtin.edu.au",
+  "root": "/home/21500358/comp3007/assignment/purcell_finn_21500358",
+  "host": "lab232-a04",
+  "executable": "/home/21500358/anaconda3/envs/comp3007/bin/python",
+  "cpu_count": 16,
+  "cpu_count_logical": 24,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1006455631872",
+      "used": "84017049600"
+    }
+  },
+  "memory": {
+    "total": "33307312128"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3060",
+      "memoryTotal": "12884901888",
+      "cudaCores": 3584,
+      "architecture": "Ampere",
+      "uuid": "GPU-d9ba3d51-34c4-6b38-d155-a2e89b8db7dd"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "sedslwfynfp0qcr7m5u4kxvz2rdsersd"
+}

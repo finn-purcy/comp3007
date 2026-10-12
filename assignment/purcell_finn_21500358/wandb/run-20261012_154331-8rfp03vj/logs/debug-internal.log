@@ -1,0 +1,12 @@
+{"time":"2026-10-12T15:43:31.987531558+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-10-12T15:43:32.618191644+08:00","level":"INFO","msg":"stream: created new stream","id":"8rfp03vj"}
+{"time":"2026-10-12T15:43:32.618224836+08:00","level":"INFO","msg":"stream: started","id":"8rfp03vj"}
+{"time":"2026-10-12T15:43:32.618235925+08:00","level":"INFO","msg":"writer: started","stream_id":"8rfp03vj"}
+{"time":"2026-10-12T15:43:32.61826746+08:00","level":"INFO","msg":"sender: started","stream_id":"8rfp03vj"}
+{"time":"2026-10-12T15:43:32.618279186+08:00","level":"INFO","msg":"handler: started","stream_id":"8rfp03vj"}
+{"time":"2026-10-12T15:47:26.738336054+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-8rfp03vj-curvesPrecision-ConfidenceB_table-CnZA-A","runtime_seconds":2.892256386},{"desc":"uploading artifact run-8rfp03vj-curvesRecall-ConfidenceB_table-fdDdCQ","runtime_seconds":1.5449479720000001,"subtasks":[{"desc":"curves/Recall-Confidence(B)_table.table.json","runtime_seconds":0.243612586,"progress":"14.4KB/14.4KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.239440157,"progress":"10.2KB/10.2KB"}],"total_operations":3}}
+{"time":"2026-10-12T15:47:28.082285189+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-12T15:47:28.702070771+08:00","level":"INFO","msg":"stream: closing","id":"8rfp03vj"}
+{"time":"2026-10-12T15:47:28.702083565+08:00","level":"INFO","msg":"handler: closed","stream_id":"8rfp03vj"}
+{"time":"2026-10-12T15:47:28.703754377+08:00","level":"INFO","msg":"sender: closed","stream_id":"8rfp03vj"}
+{"time":"2026-10-12T15:47:28.70377278+08:00","level":"INFO","msg":"stream: closed","id":"8rfp03vj"}

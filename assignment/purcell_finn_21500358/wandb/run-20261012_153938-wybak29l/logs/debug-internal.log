@@ -1,0 +1,12 @@
+{"time":"2026-10-12T15:39:39.804277961+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-10-12T15:39:40.582118655+08:00","level":"INFO","msg":"stream: created new stream","id":"wybak29l"}
+{"time":"2026-10-12T15:39:40.582164384+08:00","level":"INFO","msg":"stream: started","id":"wybak29l"}
+{"time":"2026-10-12T15:39:40.582262462+08:00","level":"INFO","msg":"handler: started","stream_id":"wybak29l"}
+{"time":"2026-10-12T15:39:40.583818581+08:00","level":"INFO","msg":"sender: started","stream_id":"wybak29l"}
+{"time":"2026-10-12T15:39:40.58381827+08:00","level":"INFO","msg":"writer: started","stream_id":"wybak29l"}
+{"time":"2026-10-12T15:40:54.944023855+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-wybak29l-curvesRecall-ConfidenceB_table-LeCm8g","runtime_seconds":1.488058101,"subtasks":[{"desc":"curves/Recall-Confidence(B)_table.table.json","runtime_seconds":0.266182578,"progress":"14.4KB/14.4KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.248282888,"progress":"10.2KB/10.2KB"}],"total_operations":2}}
+{"time":"2026-10-12T15:40:56.489805292+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-12T15:40:57.077147118+08:00","level":"INFO","msg":"stream: closing","id":"wybak29l"}
+{"time":"2026-10-12T15:40:57.077175812+08:00","level":"INFO","msg":"handler: closed","stream_id":"wybak29l"}
+{"time":"2026-10-12T15:40:57.079242206+08:00","level":"INFO","msg":"sender: closed","stream_id":"wybak29l"}
+{"time":"2026-10-12T15:40:57.079275385+08:00","level":"INFO","msg":"stream: closed","id":"wybak29l"}

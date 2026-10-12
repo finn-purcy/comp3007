@@ -1,0 +1,300 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[500] must be multiple of max stride 32, updating to [512]
+ ... (more hidden) ...
+ ... (more hidden) ...
+Plotting labels to runs/pose/train10/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 512 train, 512 val
+Using 8 dataloader workers
+Logging results to [1mruns/pose/train10[0m
+Starting training for 200 epochs...
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.782      0.954      0.932      0.719      0.721       0.87      0.766      0.411
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.971       0.97      0.994      0.844      0.971       0.97      0.994      0.739
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95       0.87      0.933      0.966        0.8      0.881      0.894      0.941      0.834
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.898      0.965      0.954      0.797      0.921      0.974      0.984      0.827
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.974       0.93      0.985      0.839      0.974       0.93      0.989      0.908
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.975          1      0.994      0.861      0.975          1      0.994      0.923
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.945          1      0.992      0.872      0.945          1      0.992      0.922
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.959          1      0.994      0.889      0.952      0.993      0.987      0.972
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.966      0.999      0.994      0.894      0.966      0.999      0.994      0.926
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.994      0.982      0.995      0.903      0.994      0.982      0.995      0.989
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.947      0.985      0.978      0.864      0.947      0.985      0.978      0.952
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.958      0.995      0.994      0.868      0.958      0.995      0.994      0.981
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.988          1      0.995      0.904      0.988          1      0.995      0.989
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.991          1      0.995      0.903      0.991          1      0.995      0.988
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.976          1      0.995      0.917      0.976          1      0.995      0.988
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.991          1      0.995      0.924      0.991          1      0.995      0.992
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.969      0.994      0.988      0.902      0.969      0.994      0.988      0.982
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.983      0.999      0.995      0.906      0.983      0.999      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.997          1      0.995      0.925      0.997          1      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995      0.915      0.998          1      0.995      0.981
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.986          1      0.995      0.909      0.986          1      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995       0.91      0.998          1      0.995       0.99
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.983          1      0.995      0.918      0.983          1      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995       0.91      0.998          1      0.995      0.992
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995       0.92      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995      0.914      0.998          1      0.995      0.993
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995      0.931      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.998          1      0.995      0.939      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95       0.99          1      0.995       0.92       0.99          1      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.989          1      0.995      0.936      0.989          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.996          1      0.995      0.935      0.996          1      0.995      0.993
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.991          1      0.995      0.934      0.991          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.988          1      0.995      0.932      0.988          1      0.995      0.993
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.997          1      0.995      0.924      0.997          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95      0.969          1      0.994      0.923      0.969          1      0.994      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+ ... (more hidden) ...
+                   all        104         95       0.99          1      0.995       0.93       0.99          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+ ... (more hidden) ...
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.997          1      0.995      0.932      0.997          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     38/200       2.6G     0.5185     0.2364    0.08529     0.3696     0.9419          7        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.997          1      0.995      0.923      0.997          1      0.995      0.994
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     39/200      2.59G     0.5139     0.2135    0.08518     0.3704     0.9404          9        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.995          1      0.995      0.948      0.995          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     40/200       2.6G     0.5146     0.2044    0.08418      0.365     0.9413         10        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995       0.94      0.998          1      0.995      0.993
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     41/200      2.59G     0.5084     0.2189     0.0814     0.3557     0.9393         10        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995       0.93      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     42/200       2.6G     0.5069     0.2173    0.08157     0.3555     0.9307         16        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.932      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     43/200      2.59G     0.4917     0.2095     0.0831     0.3449     0.9302         12        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.996          1      0.995      0.933      0.996          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     44/200       2.6G     0.4973     0.1967    0.08007     0.3476     0.9301         10        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998      0.999      0.995      0.941      0.998      0.999      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     45/200      2.59G     0.5096     0.2016     0.0776     0.3624     0.9434         10        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.933      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     46/200       2.6G     0.4957     0.1938    0.07435     0.3479     0.9331         11        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.997          1      0.995      0.945      0.997          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     47/200      2.59G     0.4906     0.1903    0.07611     0.3439     0.9341         13        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.997          1      0.995       0.94      0.997          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     48/200       2.6G     0.4897     0.1858    0.07543     0.3388      0.932          8        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.997          1      0.995      0.936      0.997          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     49/200      2.59G     0.4898     0.1812    0.07349     0.3407     0.9239         14        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.937      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     50/200       2.6G     0.4771     0.1788     0.0763     0.3397     0.9266         15        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.937      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     51/200      2.59G     0.4865     0.1761    0.07483     0.3367     0.9331          8        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.996          1      0.995      0.935      0.996          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     52/200       2.6G     0.4901     0.1718    0.06961     0.3346     0.9325          9        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.932      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     53/200      2.59G     0.4898     0.1871    0.07365     0.3382     0.9286         12        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995       0.94      0.998          1      0.995      0.995
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     54/200       2.6G     0.4872     0.1862    0.07112     0.3352     0.9326         12        512: 100%|██████████| 85/85 [00:12<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.998          1      0.995      0.944      0.998          1      0.995      0.995
+[34m[1mEarlyStopping: [0mTraining stopped early as no improvement observed in last 15 epochs. Best results observed at epoch 39, best model saved as best.pt.
+To update EarlyStopping(patience=15) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+54 epochs completed in 0.250 hours.
+Optimizer stripped from runs/pose/train10/weights/last.pt, 6.4MB
+Optimizer stripped from runs/pose/train10/weights/best.pt, 6.4MB
+
+Validating runs/pose/train10/weights/best.pt...
+Ultralytics YOLOv8.2.99 🚀 Python-3.10.12 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 3060, 11887MiB)
+YOLOv8n-pose summary (fused): 187 layers, 3,078,170 parameters, 0 gradients, 8.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.995          1      0.995      0.948      0.995          1      0.995      0.995
+                   bpm         68         68      0.993          1      0.995       0.95      0.993          1      0.995      0.995
+                thermo         27         27      0.997          1      0.995      0.947      0.997          1      0.995      0.995
+Speed: 0.5ms preprocess, 2.3ms inference, 0.0ms loss, 0.2ms postprocess per image
+Results saved to [1mruns/pose/train10[0m

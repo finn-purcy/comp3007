@@ -1,0 +1,15 @@
+path: /home/21500358/comp3007/assignment/purcell_finn_21500358/thermo_yolo
+
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 6
+names: ['0', '10', '20', '30', '40', '50']
+
+roboflow:
+  workspace: 21500358-student-curtin-edu-au
+  project: thermometer-reader
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/21500358-student-curtin-edu-au/thermometer-reader/dataset/1

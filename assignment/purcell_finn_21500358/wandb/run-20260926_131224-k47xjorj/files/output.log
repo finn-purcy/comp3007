@@ -1,0 +1,77 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[750] must be multiple of max stride 32, updating to [768]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/train/labels.cache... 2694 images, 174 backgrounds,[0m
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/valid/labels.cache... 104 images, 9 backgrounds, 0 co[0m
+Plotting labels to runs/pose/train15/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 768 train, 768 val
+Using 8 dataloader workers
+Logging results to [1mruns/pose/train15[0m
+Starting training for 200 epochs...
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      1/200      5.79G      1.076      4.143       0.68      2.139      1.398          9        768: 100%|██████████| 85/85 [00:27<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.825      0.867      0.962        0.7      0.812      0.849       0.95      0.536
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      2/200      5.74G     0.8001      1.309     0.5676     0.8864      1.122         14        768: 100%|██████████| 85/85 [00:26<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.965      0.978      0.978      0.795      0.962      0.965      0.969      0.733
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      3/200      5.73G     0.7674     0.8462     0.4831     0.7037      1.099         10        768: 100%|██████████| 85/85 [00:25<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.915      0.885      0.951      0.759      0.915      0.885      0.957      0.731
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      4/200      5.73G     0.7725     0.7987     0.4119     0.6551      1.097          5        768: 100%|██████████| 85/85 [00:26<00:00,  
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|
+                   all        104         95      0.937      0.893       0.97      0.792      0.937      0.893      0.973      0.867
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      5/200      5.73G     0.7623     0.7341     0.3628     0.6219      1.086         48        768:  71%|███████   | 60/85 [00:19<00:08,  
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 176, in <module>
+    train_many()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 85, in train_many
+    results = train_model(EPOCHS=200, BATCH=batchSize, IMGSZ=imSize, BMODEL=model)
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 59, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 176, in <module>
+    train_many()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 85, in train_many
+    results = train_model(EPOCHS=200, BATCH=batchSize, IMGSZ=imSize, BMODEL=model)
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 59, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,12 @@
+{"time":"2026-09-25T14:16:57.825462951+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-25T14:16:58.516391927+08:00","level":"INFO","msg":"stream: created new stream","id":"k1yhmdhu"}
+{"time":"2026-09-25T14:16:58.516460246+08:00","level":"INFO","msg":"stream: started","id":"k1yhmdhu"}
+{"time":"2026-09-25T14:16:58.516587886+08:00","level":"INFO","msg":"writer: started","stream_id":"k1yhmdhu"}
+{"time":"2026-09-25T14:16:58.516625202+08:00","level":"INFO","msg":"sender: started","stream_id":"k1yhmdhu"}
+{"time":"2026-09-25T14:16:58.51675382+08:00","level":"INFO","msg":"handler: started","stream_id":"k1yhmdhu"}
+{"time":"2026-09-25T14:32:22.598316209+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-k1yhmdhu-curvesPrecision-ConfidenceP_table-2iVRDQ","runtime_seconds":2.961962221},{"desc":"uploading artifact run-k1yhmdhu-curvesRecall-ConfidenceP_table-nUhXOw","runtime_seconds":1.547491898},{"desc":"uploading config.yaml","runtime_seconds":0.006587015,"progress":"15.6KB/15.6KB"}],"total_operations":3}}
+{"time":"2026-09-25T14:32:24.751113261+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-25T14:32:25.432963283+08:00","level":"INFO","msg":"stream: closing","id":"k1yhmdhu"}
+{"time":"2026-09-25T14:32:25.433005894+08:00","level":"INFO","msg":"handler: closed","stream_id":"k1yhmdhu"}
+{"time":"2026-09-25T14:32:25.436603516+08:00","level":"INFO","msg":"sender: closed","stream_id":"k1yhmdhu"}
+{"time":"2026-09-25T14:32:25.43672234+08:00","level":"INFO","msg":"stream: closed","id":"k1yhmdhu"}

@@ -1,0 +1,12 @@
+{"time":"2026-09-24T09:44:09.540899793+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-24T09:44:10.488924971+08:00","level":"INFO","msg":"stream: created new stream","id":"z47uzgj0"}
+{"time":"2026-09-24T09:44:10.489025701+08:00","level":"INFO","msg":"stream: started","id":"z47uzgj0"}
+{"time":"2026-09-24T09:44:10.489229889+08:00","level":"INFO","msg":"writer: started","stream_id":"z47uzgj0"}
+{"time":"2026-09-24T09:44:10.489239283+08:00","level":"INFO","msg":"handler: started","stream_id":"z47uzgj0"}
+{"time":"2026-09-24T09:44:10.489352267+08:00","level":"INFO","msg":"sender: started","stream_id":"z47uzgj0"}
+{"time":"2026-09-24T10:24:43.644244289+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-z47uzgj0-curvesF1-ConfidenceP_table-nSDk_g","runtime_seconds":6.96804211},{"desc":"uploading artifact run-z47uzgj0-curvesPrecision-ConfidenceP_table-PD8NSg","runtime_seconds":5.680769303},{"desc":"uploading artifact run-z47uzgj0-curvesRecall-ConfidenceP_table-ta6RFQ","runtime_seconds":0.547020865},{"desc":"uploading media/table/curves/Recall-Confidence(P)_table_75_ae62b7e923788472993c.table.json","runtime_seconds":0.193433133,"progress":"6.6KB/6.6KB"},{"desc":"uploading output.log","runtime_seconds":0.193405844,"progress":"38.8KB/38.8KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.193398841,"progress":"10.8KB/10.8KB"}],"total_operations":6}}
+{"time":"2026-09-24T10:24:46.690888335+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-24T10:24:47.44514633+08:00","level":"INFO","msg":"stream: closing","id":"z47uzgj0"}
+{"time":"2026-09-24T10:24:47.445185923+08:00","level":"INFO","msg":"handler: closed","stream_id":"z47uzgj0"}
+{"time":"2026-09-24T10:24:47.447439093+08:00","level":"INFO","msg":"sender: closed","stream_id":"z47uzgj0"}
+{"time":"2026-09-24T10:24:47.447475292+08:00","level":"INFO","msg":"stream: closed","id":"z47uzgj0"}

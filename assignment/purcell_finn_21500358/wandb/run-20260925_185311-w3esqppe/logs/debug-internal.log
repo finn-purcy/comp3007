@@ -1,0 +1,12 @@
+{"time":"2026-09-25T18:53:11.616638072+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-25T18:53:12.300566293+08:00","level":"INFO","msg":"stream: created new stream","id":"w3esqppe"}
+{"time":"2026-09-25T18:53:12.300592434+08:00","level":"INFO","msg":"stream: started","id":"w3esqppe"}
+{"time":"2026-09-25T18:53:12.300636981+08:00","level":"INFO","msg":"writer: started","stream_id":"w3esqppe"}
+{"time":"2026-09-25T18:53:12.300675858+08:00","level":"INFO","msg":"sender: started","stream_id":"w3esqppe"}
+{"time":"2026-09-25T18:53:12.300720257+08:00","level":"INFO","msg":"handler: started","stream_id":"w3esqppe"}
+{"time":"2026-09-25T19:22:30.1616024+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-w3esqppe-curvesF1-ConfidenceP_table-_s9hhw","runtime_seconds":4.293570705},{"desc":"uploading artifact run-w3esqppe-curvesPrecision-ConfidenceP_table-iKUVOg","runtime_seconds":2.937946747},{"desc":"uploading artifact run-w3esqppe-curvesRecall-ConfidenceP_table-STp4qQ","runtime_seconds":1.592568081,"subtasks":[{"desc":"curves/Recall-Confidence(P)_table.table.json","runtime_seconds":0.140424848,"progress":"7.0KB/7.0KB"}]},{"desc":"uploading media/table/curves/Recall-Confidence(P)_table_94_e602ec257c344db4468f.table.json","runtime_seconds":0.61465972,"progress":"6.6KB/6.6KB"},{"desc":"uploading output.log","runtime_seconds":0.614640108,"progress":"51.4KB/51.4KB"},{"desc":"uploading config.yaml","runtime_seconds":0.244925521,"progress":"15.6KB/15.6KB"}],"total_operations":6}}
+{"time":"2026-09-25T19:22:32.224084882+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-25T19:22:33.60513812+08:00","level":"INFO","msg":"stream: closing","id":"w3esqppe"}
+{"time":"2026-09-25T19:22:33.605195922+08:00","level":"INFO","msg":"handler: closed","stream_id":"w3esqppe"}
+{"time":"2026-09-25T19:22:33.607159233+08:00","level":"INFO","msg":"sender: closed","stream_id":"w3esqppe"}
+{"time":"2026-09-25T19:22:33.607183662+08:00","level":"INFO","msg":"stream: closed","id":"w3esqppe"}

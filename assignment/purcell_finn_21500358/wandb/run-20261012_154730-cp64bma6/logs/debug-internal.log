@@ -1,0 +1,12 @@
+{"time":"2026-10-12T15:47:30.491081775+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-10-12T15:47:31.037830072+08:00","level":"INFO","msg":"stream: created new stream","id":"cp64bma6"}
+{"time":"2026-10-12T15:47:31.037857887+08:00","level":"INFO","msg":"stream: started","id":"cp64bma6"}
+{"time":"2026-10-12T15:47:31.037958459+08:00","level":"INFO","msg":"handler: started","stream_id":"cp64bma6"}
+{"time":"2026-10-12T15:47:31.037972082+08:00","level":"INFO","msg":"writer: started","stream_id":"cp64bma6"}
+{"time":"2026-10-12T15:47:31.038004672+08:00","level":"INFO","msg":"sender: started","stream_id":"cp64bma6"}
+{"time":"2026-10-12T15:51:27.92046399+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-cp64bma6-curvesRecall-ConfidenceB_table-ZcnPvA","runtime_seconds":1.523815791,"subtasks":[{"desc":"curves/Recall-Confidence(B)_table.table.json","runtime_seconds":0.318147295,"progress":"14.6KB/14.6KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.032789731,"progress":"10.2KB/10.2KB"}],"total_operations":2}}
+{"time":"2026-10-12T15:51:29.108123014+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-12T15:51:29.706971612+08:00","level":"INFO","msg":"stream: closing","id":"cp64bma6"}
+{"time":"2026-10-12T15:51:29.706990688+08:00","level":"INFO","msg":"handler: closed","stream_id":"cp64bma6"}
+{"time":"2026-10-12T15:51:29.709211078+08:00","level":"INFO","msg":"sender: closed","stream_id":"cp64bma6"}
+{"time":"2026-10-12T15:51:29.709222993+08:00","level":"INFO","msg":"stream: closed","id":"cp64bma6"}

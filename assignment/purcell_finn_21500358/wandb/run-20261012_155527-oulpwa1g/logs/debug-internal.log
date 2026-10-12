@@ -1,0 +1,12 @@
+{"time":"2026-10-12T15:55:27.476255492+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-10-12T15:55:28.065885505+08:00","level":"INFO","msg":"stream: created new stream","id":"oulpwa1g"}
+{"time":"2026-10-12T15:55:28.06590699+08:00","level":"INFO","msg":"stream: started","id":"oulpwa1g"}
+{"time":"2026-10-12T15:55:28.066005597+08:00","level":"INFO","msg":"writer: started","stream_id":"oulpwa1g"}
+{"time":"2026-10-12T15:55:28.066077761+08:00","level":"INFO","msg":"handler: started","stream_id":"oulpwa1g"}
+{"time":"2026-10-12T15:55:28.066094741+08:00","level":"INFO","msg":"sender: started","stream_id":"oulpwa1g"}
+{"time":"2026-10-12T15:59:20.719407316+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-oulpwa1g-curvesPrecision-ConfidenceB_table-yRcNnA","runtime_seconds":2.8985556580000003},{"desc":"uploading artifact run-oulpwa1g-curvesRecall-ConfidenceB_table-XTSgmw","runtime_seconds":1.567463186,"subtasks":[{"desc":"curves/Recall-Confidence(B)_table.table.json","runtime_seconds":0.34688971,"progress":"14.4KB/14.4KB"}]},{"desc":"uploading config.yaml","runtime_seconds":0.032924965,"progress":"10.2KB/10.2KB"}],"total_operations":3}}
+{"time":"2026-10-12T15:59:21.967969938+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-10-12T15:59:22.617994926+08:00","level":"INFO","msg":"stream: closing","id":"oulpwa1g"}
+{"time":"2026-10-12T15:59:22.618009518+08:00","level":"INFO","msg":"handler: closed","stream_id":"oulpwa1g"}
+{"time":"2026-10-12T15:59:22.619933386+08:00","level":"INFO","msg":"sender: closed","stream_id":"oulpwa1g"}
+{"time":"2026-10-12T15:59:22.61999343+08:00","level":"INFO","msg":"stream: closed","id":"oulpwa1g"}

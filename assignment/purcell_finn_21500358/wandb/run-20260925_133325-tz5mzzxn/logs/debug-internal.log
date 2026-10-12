@@ -1,0 +1,12 @@
+{"time":"2026-09-25T13:33:25.55230855+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-25T13:33:26.173835826+08:00","level":"INFO","msg":"stream: created new stream","id":"tz5mzzxn"}
+{"time":"2026-09-25T13:33:26.173909075+08:00","level":"INFO","msg":"stream: started","id":"tz5mzzxn"}
+{"time":"2026-09-25T13:33:26.174033718+08:00","level":"INFO","msg":"writer: started","stream_id":"tz5mzzxn"}
+{"time":"2026-09-25T13:33:26.174092818+08:00","level":"INFO","msg":"handler: started","stream_id":"tz5mzzxn"}
+{"time":"2026-09-25T13:33:26.174212711+08:00","level":"INFO","msg":"sender: started","stream_id":"tz5mzzxn"}
+{"time":"2026-09-25T14:16:50.196512563+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-tz5mzzxn-curvesPrecision-ConfidenceP_table-SgtfZA","runtime_seconds":2.918343058},{"desc":"uploading artifact run-tz5mzzxn-curvesRecall-ConfidenceP_table-DuCPOg","runtime_seconds":1.485885149},{"desc":"uploading output.log","runtime_seconds":0.671499549,"progress":"31.7KB/31.7KB"},{"desc":"uploading config.yaml","runtime_seconds":0.179497983,"progress":"15.6KB/15.6KB"}],"total_operations":4}}
+{"time":"2026-09-25T14:16:52.142516907+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-25T14:16:52.731434885+08:00","level":"INFO","msg":"stream: closing","id":"tz5mzzxn"}
+{"time":"2026-09-25T14:16:52.731502873+08:00","level":"INFO","msg":"handler: closed","stream_id":"tz5mzzxn"}
+{"time":"2026-09-25T14:16:52.733862762+08:00","level":"INFO","msg":"sender: closed","stream_id":"tz5mzzxn"}
+{"time":"2026-09-25T14:16:52.73391169+08:00","level":"INFO","msg":"stream: closed","id":"tz5mzzxn"}

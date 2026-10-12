@@ -1,0 +1,57 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[600] must be multiple of max stride 32, updating to [608]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/train/labels.cache... 2694 images[0m
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/yolo_keypoints/valid/labels.cache... 104 images, 9[0m
+Plotting labels to runs/pose/train21/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 608 train, 608 val
+Using 8 dataloader workers
+Logging results to [1mruns/pose/train21[0m
+Starting training for 200 epochs...
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      1/200      4.14G      2.509      6.865     0.7175      4.259      2.585        117        608:   2%|▏         | 1/4
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 179, in <module>
+    train_many()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 87, in train_many
+    results = train_model(EPOCHS=200, BATCH=batchSize, IMGSZ=imSize, BMODEL=model)
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 59, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 93.81 MiB is free. Including non-PyTorch memory, this process has 11.39 GiB memory in use. Of the allocated memory 11.10 GiB is allocated by PyTorch, and 120.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 179, in <module>
+    train_many()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 87, in train_many
+    results = train_model(EPOCHS=200, BATCH=batchSize, IMGSZ=imSize, BMODEL=model)
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 59, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 93.81 MiB is free. Including non-PyTorch memory, this process has 11.39 GiB memory in use. Of the allocated memory 11.10 GiB is allocated by PyTorch, and 120.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

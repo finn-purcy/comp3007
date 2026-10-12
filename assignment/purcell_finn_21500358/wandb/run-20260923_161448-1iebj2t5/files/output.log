@@ -1,0 +1,445 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[600] must be multiple of max stride 32, updating to [608]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/labels... 2757 images, 180[0m
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165622_jpg.rf.41809bb45721aeacdb9b504c3def8f0b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0157]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165622_jpg.rf.56af432cc220d31377e7bed47ee21bca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0266]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165630_jpg.rf.081b406d458e2215cbede9f969123abf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.028]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165630_jpg.rf.5758f38c6b23b2d21f07441ff907518d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0483]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165630_jpg.rf.7ac05b2e80c65c105cfcb328ad3dea70.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0291]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165644_jpg.rf.6f2a5f3d8f222cf77750b3073b3fdcf0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0041]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165644_jpg.rf.8ddbd461e1a0440ebcfe33fb234c7169.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0433]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165644_jpg.rf.bdd609f21cbbfa53880f2dc123a3dfcf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0326]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165750_jpg.rf.4dfc104218c2daf3b21ced9763bab106.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0081]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165750_jpg.rf.b1b6f60f9129b91238133ed2d9400331.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0054]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165750_jpg.rf.bb2b70a0f624158eddeff0f87a3a92d3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0106]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165752_jpg.rf.46a118782350dfab95838b166a5e0e8e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0194]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165752_jpg.rf.c342e5c86373286fd2ca51d42ab962b0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165752_jpg.rf.ef03f7def3a6590fc0995e276f5d592d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0076]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165916_jpg.rf.200e32a63b2dbbfecc7dd794844d7062.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0229]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260802_165916_jpg.rf.9c115b8e5acefa7113f5ce1138e7c4f3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0068]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260815_105200_jpg.rf.9ea41cf10506addbb64333aba610abfd.jpg: ignoring corrupt image/label: negative label values [  -0.003275]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/20260815_105313_jpg.rf.f6670ce44dc018ecd0e52089d6af9be1.jpg: ignoring corrupt image/label: negative label values [  -0.010458]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7598_jpeg.rf.a4ecb79bf51afcc307e5111af00e2084.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0087]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7599_jpeg.rf.d1bd9b2a80ae0893f4f1d947dfe1bfec.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0076]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7600_jpeg.rf.896d4787ce246b9a6b537501222d2972.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0165]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7600_jpeg.rf.bc990abc2cc36037718a790770d16344.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0117]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7602_jpeg.rf.281719bab1fb6b2b20e25684189c3c97.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0115]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7602_jpeg.rf.da5011e4eaace743ef15e46c5bb8619c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0056]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7603_jpeg.rf.7ca6b0b1763d0702ac28704418053b4e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0098]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7603_jpeg.rf.cb1c75a4d63538f61a8cba8ae207f2a1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0079]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7609_jpeg.rf.49d595186fb65fe47db0ba465998b73c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0104]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7609_jpeg.rf.598ab4e3ab002ae8e34d279705c31af8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0208]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7609_jpeg.rf.9b705dea225300f0b5f91061ac266680.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0104]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7610_jpeg.rf.17ee52bcdf3343cd436b16a2bb2734f1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0166]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7613_jpeg.rf.2ce72cbb488c811d5c05e80ef38ac4f1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0149]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7614_jpeg.rf.28fd0cb8216bb4377ddd0bde58ae4669.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1058]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7614_jpeg.rf.35f6e6f136dc930b60367bd6692c1159.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0942]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7614_jpeg.rf.de23ad358abf6b2ee475cb2fa3a28998.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0438]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7625_jpeg.rf.1c202165d94b604e0699050e7bff380e.jpg: ignoring corrupt image/label: negative label values [  -0.004379]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7626_jpeg.rf.4cfef052d4551a36c3ddbd012ad9f214.jpg: ignoring corrupt image/label: negative label values [  -0.017032]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7647_jpeg.rf.605a5158dfb31059b9094c1db28bc46a.jpg: ignoring corrupt image/label: negative label values [  -0.009709]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7647_jpeg.rf.bf5e649a027d8211ce9a9769f6a292f0.jpg: ignoring corrupt image/label: negative label values [    -0.0198]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7655_jpeg.rf.38501ece17522806c4bba9646367fc2b.jpg: ignoring corrupt image/label: negative label values [  -0.046066]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7662_jpeg.rf.6b2118cf32f67e0efffd8390ae1f4b74.jpg: ignoring corrupt image/label: negative label values [  -0.004623]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7662_jpeg.rf.7a37ba2d100eec908f38de1f06fc6fad.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0393]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7662_jpeg.rf.fd4cbaf045509f129ad6d57d0546acc5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.081]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7670_jpeg.rf.6c05c9afcdf4825c879db89a15f903ce.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7670_jpeg.rf.708ba054ea7109603f8a77956e16f3cb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0212]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7670_jpeg.rf.c5a8272a016e1adbef48baf9455942d4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0057]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7860_jpeg.rf.f6265af3f64735731ead2044e8e4f75f.jpg: ignoring corrupt image/label: negative label values [  -0.002325]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7931_jpeg.rf.aecf8fbfa3e11b2c2abae11b432282c3.jpg: ignoring corrupt image/label: negative label values [  -0.000641]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7931_jpeg.rf.c1c8cf5404c22fd57094194ee75a468c.jpg: ignoring corrupt image/label: negative label values [  -0.011178]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7935_jpeg.rf.8f48000822122d1d594ec511908c2989.jpg: ignoring corrupt image/label: negative label values [  -0.002747]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7936_jpeg.rf.15a4af3794361aa8ea90b28e904f6966.jpg: ignoring corrupt image/label: negative label values [  -0.054248]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7936_jpeg.rf.690ca381a31784496852452037603ddb.jpg: ignoring corrupt image/label: negative label values [  -0.017632]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7937_jpeg.rf.97cb9b8ee6c5797092b8f1e30a2203cd.jpg: ignoring corrupt image/label: negative label values [   -0.03688]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7964_jpeg.rf.d5aa6f46d7c7fcf5d73ebfbbe26188c1.jpg: ignoring corrupt image/label: negative label values [   -0.04737]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_7991_jpeg.rf.50f8bb180fc40686201d1745849c7710.jpg: ignoring corrupt image/label: negative label values [  -0.034366]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8204_HEIC.rf.0e8d8c769c8e2a193b1721e6b8d44798.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0106]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8208_HEIC.rf.4a5836064ab2de96e7d3375cfc815e8f.jpg: ignoring corrupt image/label: negative label values [  -0.015489]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8238_HEIC.rf.2d95fd725a5c68a0ade8d29e348aa718.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0218]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8238_HEIC.rf.bc5aa92225888ba54dcb21009f119980.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0069]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8241_HEIC.rf.6d1318613f45fe98f3ef6cd2886b24e9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0001]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8241_HEIC.rf.e33c08424a7f6dd42bc0a0fb4066a4cd.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0019      1.0282]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/IMG_8241_HEIC.rf.f8f07d65d198ae7435280fc3166bceb2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/WIN_20260913_21_00_04_Pro_jpg.rf.a67607201c79b88ff7e9a5b34d8d5016.jpg: ignoring corrupt image/label: negative label values [  -0.007055]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/WIN_20260913_21_00_04_Pro_jpg.rf.c1bf1ef37d4a17c4454cdcc9c88e6745.jpg: ignoring corrupt image/label: negative label values [  -0.026716]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image002_jpg.rf.7d177c29498f469c0639583bbb0ada33.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0033]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image003_jpg.rf.4320ced6017903c47a3057bc0bad4ce3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.031]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image005_jpg.rf.38074a04498074dab4294ed9ff4748f3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0038]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image008_jpg.rf.8bb0cdd28237bccf87c78faa4b95fe1d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0174]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image010_jpg.rf.2f021d704c46658efa5c2b05e325675e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0245]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image010_jpg.rf.8df2704ea66ecf36ff781bae71822fe5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0301]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image024_jpg.rf.d76e3e4893204614a2a21aaea6abd96c.jpg: ignoring corrupt image/label: negative label values [  -0.077905]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image024_jpg.rf.fcea3f4d2d41827c5effc3cc3239dbe2.jpg: ignoring corrupt image/label: negative label values [  -0.038596]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/images/image027_jpg.rf.17ec9eaf57d492b88569adc22132e4e4.jpg: ignoring corrupt image/label: negative label values [  -0.001062]
+[34m[1mtrain: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/train/labels.cache
+WARNING ⚠️ No 'flip_idx' array defined in data.yaml, setting augmentation 'fliplr=0.0'
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/valid/labels... 104 images, 9 back[0m
+[34m[1mval: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/valid/images/20260802_165627_jpg.rf.a400086660cf128904752ea18f51f7c5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0309]
+[34m[1mval: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/valid/images/IMG_7601_jpeg.rf.08feba0eb9d75b8163fed05bb99b263c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.008]
+[34m[1mval: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/valid/images/image006_jpg.rf.db14e0b8be469b0b81a4352e62b8f530.jpg: ignoring corrupt image/label: negative label values [  -0.009448]
+[34m[1mval: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data3/valid/labels.cache
+Plotting labels to runs/pose/train2/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 608 train, 608 val
+Using 8 dataloader workers
+Logging results to [1mruns/pose/train2[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      6.76G      1.126      3.749     0.6396      1.649      1.335         61        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.891       0.92       0.97      0.741      0.758      0.784      0.774      0.444
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      2/100      6.72G     0.9117      1.574     0.5074     0.8322      1.119         45        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.876      0.945      0.956      0.728      0.821      0.888      0.873      0.572
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      3/100      6.72G     0.9009      1.313     0.4226     0.7254      1.103         58        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.916       0.86      0.914      0.684      0.863      0.801      0.798      0.589
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      4/100      6.71G     0.8933      1.223     0.3556     0.6941      1.104         64        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.836      0.823      0.907       0.69        0.7      0.699      0.647      0.444
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      5/100      6.71G     0.8553      1.069     0.2949     0.6388      1.085         64        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.952      0.986      0.988      0.823      0.828      0.859      0.824      0.763
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      6/100      6.72G     0.8193      0.885     0.2494      0.582      1.068         59        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.969      0.991      0.993      0.821      0.912      0.942      0.912      0.866
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      7/100      6.71G     0.7903     0.9192     0.2281     0.5537      1.051         59        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.956      0.979      0.981      0.836      0.928       0.95      0.933      0.841
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      8/100      6.71G     0.7668      0.822     0.2021     0.5287      1.043         62        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.975      0.992      0.993      0.864      0.915      0.934      0.895       0.85
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+      9/100      6.71G     0.7614      0.787      0.183     0.5194      1.034         48        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92          1      0.999      0.995      0.842      0.948      0.947      0.923      0.871
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     10/100      6.71G     0.7285     0.7494     0.1762     0.5023      1.018         62        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.966      0.985      0.991      0.846       0.86      0.871      0.842      0.769
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     11/100      6.72G     0.7238      0.701     0.1592     0.4936      1.015         63        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.993      0.993      0.995      0.862      0.919      0.919      0.875      0.849
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     12/100      6.72G     0.7072     0.6809     0.1602     0.4703      1.011         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.949      0.989      0.991      0.857      0.893      0.938      0.905       0.84
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     13/100      6.72G     0.7021     0.6617     0.1521     0.4616      1.008         58        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92       0.98          1      0.995      0.879       0.82      0.838      0.737      0.665
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     14/100      6.72G     0.6896     0.6154     0.1403     0.4541     0.9996         61        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.984      0.994      0.995       0.88      0.946      0.957      0.958      0.937
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     15/100      6.72G     0.6683     0.6152     0.1381     0.4401     0.9907         60        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.979      0.995      0.995      0.866      0.934      0.951       0.92      0.872
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     16/100      6.72G      0.678     0.5813     0.1369     0.4427     0.9971         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.969          1       0.99      0.877      0.891       0.92       0.88      0.817
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     17/100      6.72G     0.6703     0.6077     0.1424     0.4372     0.9963         67        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92       0.99      0.993      0.995       0.87      0.954      0.957      0.958      0.932
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     18/100      6.72G     0.6593     0.5633     0.1267     0.4317     0.9894         54        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.967      0.997      0.995      0.877      0.844       0.87      0.797      0.752
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     19/100      6.72G     0.6411     0.5512     0.1204     0.4162     0.9802         61        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.995          1      0.995      0.871      0.923      0.928      0.916      0.822
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     20/100      6.72G     0.6514     0.4845     0.1208     0.4183     0.9902         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998      0.998      0.995      0.874      0.969      0.969      0.961      0.946
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     21/100      6.72G     0.6318     0.5254     0.1151      0.404     0.9692         69        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.996      0.998      0.995      0.849      0.937       0.94      0.912      0.894
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     22/100      6.72G     0.6415     0.5139     0.1184     0.4103     0.9802         61        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.974      0.993      0.995      0.896       0.93      0.949      0.945       0.92
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     23/100      6.72G     0.6374      0.524     0.1118     0.4047     0.9815         69        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.991          1      0.995      0.897      0.955      0.963       0.95      0.928
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     24/100      6.72G     0.6101     0.4866     0.1093     0.3878     0.9711         51        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.992          1      0.995       0.89      0.925      0.934      0.915      0.905
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     25/100      6.72G     0.6075     0.5168     0.1069     0.3903     0.9644         52        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.977          1      0.995      0.897      0.942      0.963      0.958      0.936
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     26/100      6.72G     0.6146     0.4992     0.1113      0.388     0.9654         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.996          1      0.995      0.893      0.931      0.935       0.91      0.888
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     27/100      6.72G     0.6105     0.4819     0.1063     0.3893     0.9676         50        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.896      0.932      0.935      0.924       0.89
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     28/100      6.72G     0.6013     0.4492     0.1087     0.3885     0.9666         55        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997      0.995      0.995      0.895      0.931       0.93      0.934      0.921
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     29/100      6.72G     0.5951     0.4731     0.1015     0.3771     0.9627         54        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.893      0.953      0.956      0.933      0.929
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     30/100      6.72G     0.5893     0.4717    0.09962     0.3736     0.9644         70        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.897      0.938      0.941      0.918       0.91
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     31/100      6.72G     0.5936     0.3971    0.09213      0.371     0.9608         65        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.994          1      0.995      0.903      0.964      0.971      0.969      0.956
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     32/100      6.72G     0.5662     0.4311    0.09267     0.3587     0.9486         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.913      0.953      0.956      0.955      0.951
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     33/100      6.72G     0.5718     0.4298    0.09324      0.361     0.9547         67        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.884      0.946      0.949      0.935      0.917
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     34/100      6.72G     0.5636     0.4164    0.08949     0.3576     0.9505         52        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997      0.996      0.995      0.897      0.953      0.952      0.951      0.934
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     35/100      6.72G     0.5668     0.3751    0.08762     0.3527     0.9476         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.995      0.999      0.995      0.908      0.958      0.962      0.951      0.947
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     36/100      6.72G     0.5725     0.3955    0.09074     0.3543     0.9491         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.895       0.96      0.963       0.94      0.919
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     37/100      6.72G       0.56     0.4137    0.09484     0.3484     0.9503         51        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.994          1      0.995      0.898       0.95      0.956      0.951      0.943
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     38/100      6.72G     0.5675     0.3689    0.08218     0.3457     0.9561         67        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.913      0.862      0.864      0.828      0.828
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     39/100      6.72G     0.5525     0.4129    0.09019     0.3475      0.944         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.877      0.926      0.928      0.903      0.902
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     40/100      6.72G     0.5394     0.3692     0.0843     0.3374     0.9439         53        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.918      0.976      0.978       0.96      0.956
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     41/100      6.72G     0.5488     0.3512    0.08276     0.3444     0.9432         70        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.988          1      0.995      0.903      0.959      0.971      0.971      0.951
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     42/100      6.72G     0.5411     0.3742    0.08785     0.3368     0.9417         69        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.906       0.94      0.942      0.931       0.93
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     43/100      6.72G     0.5373     0.3678    0.07975     0.3311     0.9382         50        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998      0.994      0.995      0.897      0.948      0.944      0.942      0.925
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     44/100      6.72G     0.5304     0.3582    0.08637     0.3318     0.9352         62        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.979          1      0.995      0.896      0.935      0.956      0.947      0.947
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     45/100      6.72G     0.5302     0.3233    0.07683     0.3303     0.9402         55        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.916      0.953      0.956       0.95      0.946
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     46/100      6.72G     0.5318     0.3183    0.07454     0.3242     0.9354         58        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.996          1      0.995      0.916      0.952      0.956      0.933      0.931
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     47/100      6.72G     0.5313     0.3423    0.07883     0.3332     0.9425         74        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.918      0.968      0.971      0.968      0.967
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     48/100      6.72G     0.5134       0.32    0.07666      0.321     0.9276         64        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.923      0.961      0.963      0.965      0.961
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     49/100      6.72G     0.5221     0.3369    0.07739     0.3205      0.931         45        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.919      0.961      0.963      0.944      0.929
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     50/100      6.72G     0.5106     0.3357    0.07716     0.3151     0.9281         59        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.996      0.999      0.995      0.926      0.959      0.963      0.951      0.934
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     51/100      6.72G     0.5124     0.3848    0.07687     0.3207     0.9257         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.996          1      0.995      0.922      0.967      0.971      0.962      0.961
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     52/100      6.72G     0.5124     0.3472    0.07565     0.3191     0.9353         55        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995       0.91      0.961      0.963      0.958      0.956
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     53/100      6.72G     0.5066     0.2867    0.07185     0.3142     0.9361         55        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995       0.92      0.969      0.971      0.968      0.967
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     54/100      6.72G      0.514     0.2879    0.07303     0.3211      0.936         60        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.915      0.932      0.934      0.921      0.908
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     55/100      6.72G     0.5023     0.2885    0.06795     0.3096     0.9297         58        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.999      0.994      0.995      0.912      0.961      0.957      0.954      0.952
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     56/100      6.72G     0.4975     0.2974     0.0713     0.3051     0.9261         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.922      0.961      0.963      0.962       0.95
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     57/100      6.72G     0.4956     0.3074    0.07107     0.3058     0.9212         48        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.939      0.932      0.934      0.936       0.93
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     58/100      6.72G     0.4929     0.2762     0.0696     0.3035     0.9234         58        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.931      0.939      0.941      0.912      0.901
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     59/100      6.72G     0.4987     0.3043    0.07294     0.3089     0.9252         51        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.926      0.947       0.95      0.954       0.95
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     60/100      6.72G     0.4899     0.2979    0.06853     0.2979     0.9232         54        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.935      0.954      0.956      0.954      0.931
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     61/100      6.72G     0.4913     0.2871    0.06972        0.3     0.9232         65        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995       0.93      0.969      0.971      0.968       0.96
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     62/100      6.72G     0.4734     0.2595    0.06169     0.2961     0.9133         55        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.995          1      0.995      0.915      0.951      0.956      0.946      0.943
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     63/100      6.72G     0.4751     0.2675    0.06903     0.2941     0.9179         62        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92       0.99      0.993      0.995      0.925      0.938      0.941      0.941      0.941
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     64/100      6.72G     0.4787     0.2725    0.06601     0.2928     0.9149         45        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.928      0.961      0.963       0.96       0.96
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     65/100      6.72G     0.4751     0.2698    0.06803     0.2906     0.9204         56        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.926      0.969      0.971      0.971      0.971
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     66/100      6.72G     0.4692     0.2673    0.06753     0.2879     0.9133         68        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.916      0.939      0.941      0.941      0.933
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     67/100      6.72G     0.4684     0.2688     0.0615     0.2912      0.915         57        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997      0.999      0.995      0.926       0.96      0.962       0.96       0.96
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     68/100      6.72G     0.4609     0.2505    0.06231     0.2849     0.9117         54        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.933      0.961      0.963      0.962      0.962
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     69/100      6.72G     0.4608     0.2223    0.05933     0.2807     0.9048         60        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.998          1      0.995      0.932      0.969      0.971      0.973      0.973
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     70/100      6.72G     0.4563     0.2245    0.06284     0.2789     0.9108         63        608: 100%|█████
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R
+                   all        101         92      0.997          1      0.995      0.927      0.953      0.956      0.963      0.963
+
+      Epoch    GPU_mem   box_loss  pose_loss  kobj_loss   cls_loss   dfl_loss  Instances       Size
+     71/100      6.72G     0.4666     0.2505    0.06237     0.2752     0.9106         64        608:  63%|█████

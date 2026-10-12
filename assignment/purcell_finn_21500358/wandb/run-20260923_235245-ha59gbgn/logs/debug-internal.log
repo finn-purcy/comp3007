@@ -1,0 +1,6 @@
+{"time":"2026-09-23T23:52:46.438508038+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2026-09-23T23:52:47.112118118+08:00","level":"INFO","msg":"stream: created new stream","id":"ha59gbgn"}
+{"time":"2026-09-23T23:52:47.112163572+08:00","level":"INFO","msg":"stream: started","id":"ha59gbgn"}
+{"time":"2026-09-23T23:52:47.112254904+08:00","level":"INFO","msg":"writer: started","stream_id":"ha59gbgn"}
+{"time":"2026-09-23T23:52:47.112329499+08:00","level":"INFO","msg":"sender: started","stream_id":"ha59gbgn"}
+{"time":"2026-09-23T23:52:47.112356827+08:00","level":"INFO","msg":"handler: started","stream_id":"ha59gbgn"}

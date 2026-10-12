@@ -1,0 +1,69 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[600] must be multiple of max stride 32, updating to [608]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels.cache... 2694 images, 174 back[0m
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.4dfc104218c2daf3b21ced9763bab106.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0164]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.cc83ebc194f7d6321001616f8bbd6a3f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0003]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.01b922972f0b9c64e0499fd9688e1f6c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0403]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.80306881d0d0430ce0812b58d3818d04.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0098]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.ef03f7def3a6590fc0995e276f5d592d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0153]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7613_jpeg.rf.c349e2f7ffcb549a50f81b34d12e0457.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0189]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.274b01c4475e772ca883260eb7b06237.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0622]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.35f6e6f136dc930b60367bd6692c1159.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0969]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.667abaab38902fda35abdaca9c0c065b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0793]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.6b2118cf32f67e0efffd8390ae1f4b74.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.5b625775f2c0dae554b400ff7cac8faf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.c5a8272a016e1adbef48baf9455942d4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0099]
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels.cache... 104 images, 9 backgroun[0m
+Plotting labels to runs/obb/train6/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.0005), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 608 train, 608 val
+Using 8 dataloader workers
+Logging results to [1mruns/obb/train6[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      4.66G      1.761       3.96       2.64        130        608:   2%|▏         | 1/42 [00:01<00:55,  1.35s
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 115.81 MiB is free. Including non-PyTorch memory, this process has 11.38 GiB memory in use. Of the allocated memory 11.09 GiB is allocated by PyTorch, and 125.15 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 393, in _do_train
+    self.scaler.scale(self.loss).backward()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 115.81 MiB is free. Including non-PyTorch memory, this process has 11.38 GiB memory in use. Of the allocated memory 11.09 GiB is allocated by PyTorch, and 125.15 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

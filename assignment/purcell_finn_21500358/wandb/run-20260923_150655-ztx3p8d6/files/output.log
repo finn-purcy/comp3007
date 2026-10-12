@@ -1,0 +1,127 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [0mchecks passed ✅
+WARNING ⚠️ imgsz=[720] must be multiple of max stride 32, updating to [736]
+[34m[1mtrain: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels... 2694 images, 174 background[0m
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.4dfc104218c2daf3b21ced9763bab106.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0164]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165750_jpg.rf.cc83ebc194f7d6321001616f8bbd6a3f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0003]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.01b922972f0b9c64e0499fd9688e1f6c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0403]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.80306881d0d0430ce0812b58d3818d04.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0098]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/20260802_165752_jpg.rf.ef03f7def3a6590fc0995e276f5d592d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0153]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7613_jpeg.rf.c349e2f7ffcb549a50f81b34d12e0457.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0189]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.274b01c4475e772ca883260eb7b06237.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0622]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.35f6e6f136dc930b60367bd6692c1159.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0969]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7614_jpeg.rf.667abaab38902fda35abdaca9c0c065b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0793]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7662_jpeg.rf.6b2118cf32f67e0efffd8390ae1f4b74.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.5b625775f2c0dae554b400ff7cac8faf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [0mWARNING ⚠️ /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/images/IMG_7670_jpeg.rf.c5a8272a016e1adbef48baf9455942d4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0099]
+[34m[1mtrain: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/train/labels.cache
+[34m[1mval: [0mScanning /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels... 104 images, 9 backgrounds, 0 [0m
+[34m[1mval: [0mNew cache created: /home/21500358/comp3007/assignment/purcell_finn_21500358/data/valid/labels.cache
+Plotting labels to runs/obb/train4/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 63 weight(decay=0.0), 73 weight(decay=0.001), 72 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 736 train, 736 val
+Using 8 dataloader workers
+Logging results to [1mruns/obb/train4[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+  0%|          | 0/21 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 385, in _do_train
+    self.loss, self.loss_items = self.model(batch)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 107, in forward
+    return self.loss(x, *args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 288, in loss
+    preds = self.forward(batch["img"]) if preds is None else preds
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 108, in forward
+    return self.predict(x, *args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 126, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 147, in _predict_once
+    x = m(x)  # run
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/modules/block.py", line 236, in forward
+    return self.cv2(torch.cat(y, 1))
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/modules/conv.py", line 50, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/functional.py", line 2822, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 530.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 485.81 MiB is free. Including non-PyTorch memory, this process has 11.01 GiB memory in use. Of the allocated memory 10.45 GiB is allocated by PyTorch, and 403.29 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 129, in <module>
+    run_task1("btuh", "tg")
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 125, in run_task1
+    model = train_model()
+  File "/home/21500358/comp3007/assignment/purcell_finn_21500358/task1.py", line 63, in train_model
+    yolo.train(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/model.py", line 803, in train
+    self.trainer.train()
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 385, in _do_train
+    self.loss, self.loss_items = self.model(batch)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 107, in forward
+    return self.loss(x, *args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 288, in loss
+    preds = self.forward(batch["img"]) if preds is None else preds
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 108, in forward
+    return self.predict(x, *args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 126, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/tasks.py", line 147, in _predict_once
+    x = m(x)  # run
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/modules/block.py", line 236, in forward
+    return self.cv2(torch.cat(y, 1))
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/ultralytics/nn/modules/conv.py", line 50, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/home/21500358/anaconda3/envs/comp3007/lib/python3.10/site-packages/torch/nn/functional.py", line 2822, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 530.00 MiB. GPU 0 has a total capacity of 11.61 GiB of which 485.81 MiB is free. Including non-PyTorch memory, this process has 11.01 GiB memory in use. Of the allocated memory 10.45 GiB is allocated by PyTorch, and 403.29 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
